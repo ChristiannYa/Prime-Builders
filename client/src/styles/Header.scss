@@ -1,0 +1,129 @@
+.header {
+  background-color: var(--color-nav-background);
+
+  width: 100vw;
+  padding: 16px 32px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  &__toggleBtn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+
+    width: 30px;
+    height: 30px;
+
+    display: none;
+
+    position: relative;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
+    &-burger {
+      background-color: var(--color-nav-text);
+      transition: background-color 0.3s ease;
+
+      width: 100%;
+      height: 2px;
+
+      display: block;
+
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        background-color: var(--color-nav-text);
+        transition: transform 0.3s ease;
+
+        width: 100%;
+        height: 2px;
+
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: -8px;
+      }
+
+      &::after {
+        bottom: -8px;
+      }
+    }
+
+    &--open {
+      .header__toggleBtn-burger {
+        // Hide the middle line
+        background-color: transparent;
+
+        &::before {
+          transform: rotate(45deg);
+          top: 0;
+        }
+
+        &::after {
+          transform: rotate(-45deg);
+          bottom: 0;
+        }
+      }
+    }
+  }
+
+  &__nav {
+    position: relative;
+
+    &-list {
+      font-family: var(--font-nunito);
+
+      display: flex;
+      gap: 0 21px;
+
+      @media (max-width: 768px) {
+        background-color: var(--color-nav-background);
+        border-radius: 4px;
+        box-shadow: var(--shadow-nav);
+          font-size: 1.3rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+
+        padding: 16px;
+        width: 300px;
+
+        flex-direction: column;
+        gap: 18px 0;
+
+        position: absolute;
+        top: var(--header-height);
+        right: -16px;
+
+        &--open {
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0);
+        }
+      }
+    }
+
+    &-item {
+      color: var(--color-nav-text);
+
+      @media (hover: hover) {
+        &:hover {
+          color: var(--color-nav-text-hover);
+        }
+      }
+    }
+  }
+}
