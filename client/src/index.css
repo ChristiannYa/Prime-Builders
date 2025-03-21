@@ -1,18 +1,22 @@
 @import 'tailwindcss';
 
 @theme {
-  --color-nav-background: #ffffff;
-  --color-nav-text: #505050;
-  --color-nav-text-hover: var(--color-primary);
+  --color-nav-background: var(--color-secondary);
   --color-text-white: #ffffff;
+  --color-text-black: #101010;
   --color-primary: #f59e0b;
   --color-primary-hover: #d97706;
+  --color-secondary: #242f4d;
 
   --font-bonanova: 'Bona Nova SC', serif;
   --font-crimson: 'Crimson Text', serif;
   --font-nunito: 'Nunito Sans', sans-serif;
+  --font-unna: 'Unna', serif;
+  --font-monsterrat: 'Montserrat', sans-serif;
 
-  --shadow-nav: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  --shadow-nav: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    --shadow-card: rgba(0, 0, 0, 0.2) 4px 4px 3px 1px;
 }
 
 @layer components {
@@ -29,7 +33,82 @@
       &:hover {
         background-color: var(--color-primary-hover);
       }
-    }    
+    }
+  }
+
+  .landingSection {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .aboutValues {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 16px;
+  }
+
+  /* Screen Sizes */
+  .screen {
+    width: min(90%, 1000px);
+    margin-inline: auto;
+  }
+
+  .screen-lg {
+    width: min(90%, 1200px);
+    margin-inline: auto;
+  }
+
+  .screen-xl {
+    width: min(90%, 1400px);
+    margin-inline: auto;
+  }
+
+  /* Text  Styles */
+  .pageTitle {
+    @apply text-5xl xl:text-7xl;
+    color: var(--color-text-white);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0);
+    font-family: var(--font-unna);
+    font-weight: 500;
+    letter-spacing: 0.1rem;
+  }
+
+  .pageSubtitle {
+    @apply text-xl xl:text-2xl;
+    color: var(--color-text-white);
+    font-family: var(--font-nunito);
+    font-weight: 400;
+  }
+
+  .textTitle {
+    @apply text-xl xl:text-2xl;
+    color: var(--color-primary);
+    font-family: var(--font-monsterrat);
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  .textSubtitle {
+    @apply text-lg xl:text-xl;
+    color: var(--color-text-white);
+    font-family: var(--font-monsterrat);
+    font-weight: 400;
+    text-transform: capitalize;
+  }
+
+  .text {
+    @apply text-lg xl:text-xl;
+    color: var(--color-text-white);
+    font-family: var(--font-nunito);
+    font-weight: 300;
+    letter-spacing: .5px;
+  }
+
+  .textCard {
+    @apply text-base xl:text-lg text-text-white/80;
+    font-family: var(--font-nunito);
+    font-weight: 300;
+    letter-spacing: .5px;
   }
 
   .textShadow {
@@ -39,22 +118,22 @@
 
   /* Super Big Text */
   .text-super {
-    font-size: 1.75rem; 
+    font-size: 1.75rem;
 
     @media (min-width: 640px) {
-      font-size: 2.25rem; 
+      font-size: 2.25rem;
     }
 
     @media (min-width: 768px) {
-      font-size: 3rem; 
+      font-size: 3rem;
     }
 
     @media (min-width: 1024px) {
-      font-size: 3.75rem; 
+      font-size: 3.75rem;
     }
 
     @media (min-width: 1280px) {
-      font-size: 4.5rem; 
+      font-size: 4.5rem;
     }
   }
 
@@ -63,54 +142,54 @@
     font-size: 1.5rem;
 
     @media (min-width: 640px) {
-      font-size: 1.75rem; 
+      font-size: 1.75rem;
     }
 
     @media (min-width: 768px) {
-      font-size: 2rem; 
+      font-size: 2rem;
     }
 
     @media (min-width: 1024px) {
-      font-size: 2.5rem; 
+      font-size: 2.5rem;
     }
   }
 
   /* Medium Text */
   .text-medium {
-    font-size: 1.25rem; 
+    font-size: 1.25rem;
 
     @media (min-width: 640px) {
       font-size: 1.375rem;
     }
 
     @media (min-width: 768px) {
-      font-size: 1.5rem; 
+      font-size: 1.5rem;
     }
 
     @media (min-width: 1024px) {
-      font-size: 1.75rem; 
+      font-size: 1.75rem;
     }
   }
 
   /* Normal Text */
   .text-normal {
-    font-size: 1rem; 
+    font-size: 1rem;
 
     @media (min-width: 640px) {
       font-size: 1.125rem;
     }
 
     @media (min-width: 1024px) {
-      font-size: 1.25rem; 
+      font-size: 1.25rem;
     }
   }
 
   /* Small Text */
   .text-small {
-    font-size: 0.875rem; 
+    font-size: 0.875rem;
 
     @media (min-width: 1024px) {
-      font-size: 1rem; 
+      font-size: 1rem;
     }
   }
 
@@ -119,7 +198,7 @@
     font-size: 0.75rem;
 
     @media (min-width: 1024px) {
-      font-size: 0.875rem; 
+      font-size: 0.875rem;
     }
   }
 
@@ -192,10 +271,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     transition: top 0.3s ease;
-  }
-
-  body.menu-is-open .absolute-middle {
-    top: calc(var(--header-height) + 60vh * 2);
   }
 
   .absolute-middle-right {

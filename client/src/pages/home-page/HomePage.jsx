@@ -1,6 +1,6 @@
 const HomePage = () => {
   return (
-    <div className="h-[calc(100vh-var(--header-height))] w-full overflow-hidden">
+    <div className="wh-screen overflow-hidden">
        <video 
         autoPlay 
         loop 
@@ -11,8 +11,7 @@ const HomePage = () => {
         <source src="/home-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      {/* here */}
-      <div className="text-center space-y-4 max-sm:w-full px-8 mt-[var(--header-height)] absolute-middle">
+      <div className="text-center space-y-4 max-sm:w-full px-8 absolute-middle">
         <h1 className="text-text-white textShadow font-bonanova text-big">
           Prime Builders CPT
         </h1>

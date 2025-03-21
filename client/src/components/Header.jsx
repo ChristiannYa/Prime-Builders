@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+
 import { navLinks } from '../contants/layout';
+import pageAssets from '../assets/page';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,9 +13,7 @@ const Header = () => {
 
   return (
     <header className="header">
-      <div>
-        LOGO
-      </div>
+      <img src={pageAssets.logo} alt="Prime Builders Logo" width={80} />
       <nav className="header__nav">
         <button 
           className={`header__toggleBtn ${isMenuOpen ? "header__toggleBtn--open" : ""}`} 

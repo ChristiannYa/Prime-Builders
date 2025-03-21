@@ -1,5 +1,5 @@
 .header {
-  background-color: var(--color-nav-background);
+  background-color: transparent;
 
   width: 100vw;
   padding: 16px 32px;
@@ -30,7 +30,7 @@
     }
 
     &-burger {
-      background-color: var(--color-nav-text);
+      background-color: transparent;
       transition: background-color 0.3s ease;
 
       width: 100%;
@@ -43,7 +43,7 @@
       &::before,
       &::after {
         content: '';
-        background-color: var(--color-nav-text);
+        background-color: var(--color-text-white);
         transition: transform 0.3s ease;
 
         width: 100%;
@@ -87,25 +87,25 @@
       font-family: var(--font-nunito);
 
       display: flex;
-      gap: 0 21px;
+      gap: 0 16px;
 
       @media (max-width: 768px) {
         background-color: var(--color-nav-background);
         border-radius: 4px;
         box-shadow: var(--shadow-nav);
-          font-size: 1.3rem;
+          font-size: 1.1rem;
         opacity: 0;
         visibility: hidden;
         transition: all 0.3s ease;
 
-        padding: 16px;
+        padding: 12px 16px;
         width: 300px;
 
         flex-direction: column;
-        gap: 18px 0;
+        gap: 12px 0;
 
         position: absolute;
-        top: var(--header-height);
+        top: 62px;
         right: -16px;
 
         &--open {
@@ -117,11 +117,11 @@
     }
 
     &-item {
-      color: var(--color-nav-text);
+      color: var(--color-text-white);
 
       @media (hover: hover) {
         &:hover {
-          color: var(--color-nav-text-hover);
+          color: var(--color-primary);
         }
       }
     }
