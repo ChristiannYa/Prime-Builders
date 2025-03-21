@@ -11,12 +11,12 @@ const HomePage = () => {
         <source src="/home-video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-      <div className="text-center space-y-4 max-sm:w-full px-8 absolute-middle">
-        <h1 className="text-text-white textShadow font-bonanova text-big">
-          Prime Builders CPT
+      <div className="dark-glass text-center w-full p-2 absolute-bottom-center mb-12">
+        <h1 className="text-text-white textShadow font-bonanova text-super">
+          Prime Builders cpt llc
         </h1>
         <div className="space-y-1">
-          <div className='text-text-white font-crimson text-medium'>
+          <div className='text-text-white font-nunito text-medium'>
             <p>
               We create durable, beautiful, and custom-built homes with a
               passion for excellence and attention to detail.

@@ -1,6 +1,6 @@
 const AboutIntroductionSection = () => {
   return (
-    <section className="bg-secondary py-12">
+    <section className="bg-secondary py-16">
       <div className="screen space-y-6">
         <p className="text">
           At Prime Builders, we believe a home is more than just walls and a

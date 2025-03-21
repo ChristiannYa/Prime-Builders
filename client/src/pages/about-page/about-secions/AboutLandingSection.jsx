@@ -4,7 +4,7 @@ const AboutLandingSection = () => {
   return (
     <section className="landingSection w-screen">
       <img 
-        src={aboutAssets.about} 
+        src={aboutAssets.aboutBg} 
         alt="Team members group photo" 
         className="wh-full object-cover"
       />

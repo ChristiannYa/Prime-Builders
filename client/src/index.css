@@ -7,6 +7,7 @@
   --color-primary: #f59e0b;
   --color-primary-hover: #d97706;
   --color-secondary: #242f4d;
+  --color-secondary-2: #2e3b5e;
 
   --font-bonanova: 'Bona Nova SC', serif;
   --font-crimson: 'Crimson Text', serif;
@@ -14,26 +15,31 @@
   --font-unna: 'Unna', serif;
   --font-monsterrat: 'Montserrat', sans-serif;
 
-  --shadow-nav: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    --shadow-card: rgba(0, 0, 0, 0.2) 4px 4px 3px 1px;
+  --shadow-nav: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+  --shadow-card: rgba(0, 0, 0, 0.2) 4px 4px 3px 1px;
 }
 
 @layer components {
   .ctaLanding {
-    background-color: #101010;
-    font-family: var(--font-bonanova);
+    background-color: transparent;
+    font-family: var(--font-nunito);
     border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.2s ease;
 
-    padding: 2px 8px;
+    padding: 4px 8px;
 
     @media (hover: hover) {
       &:hover {
         background-color: var(--color-primary-hover);
       }
     }
+  }
+
+  .dark-glass {
+    background: #242f4d60;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
   }
 
   .landingSection {
@@ -67,9 +73,10 @@
   .pageTitle {
     @apply text-5xl xl:text-7xl;
     color: var(--color-text-white);
-    text-shadow: 2px 2px 3px rgba(0, 0, 0);
+    /* text-shadow: 2px 2px 3px rgba(0, 0, 0); */
     font-family: var(--font-unna);
     font-weight: 500;
+    text-transform: uppercase;
     letter-spacing: 0.1rem;
   }
 
@@ -81,7 +88,7 @@
   }
 
   .textTitle {
-    @apply text-xl xl:text-2xl;
+    @apply text-2xl xl:text-3xl;
     color: var(--color-primary);
     font-family: var(--font-monsterrat);
     font-weight: 400;
@@ -101,14 +108,14 @@
     color: var(--color-text-white);
     font-family: var(--font-nunito);
     font-weight: 300;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
 
   .textCard {
     @apply text-base xl:text-lg text-text-white/80;
     font-family: var(--font-nunito);
     font-weight: 300;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
   }
 
   .textShadow {
@@ -156,18 +163,18 @@
 
   /* Medium Text */
   .text-medium {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
 
     @media (min-width: 640px) {
-      font-size: 1.375rem;
+      font-size: 1.2rem;
     }
 
     @media (min-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1.35rem;
     }
 
     @media (min-width: 1024px) {
-      font-size: 1.75rem;
+      font-size: 1.5rem;
     }
   }
 
