@@ -1,6 +1,10 @@
+import ContactLandingSection from "./contact-sections/ContactForm"
+
 const ContactPage = () => {
   return (
-    <div>ContactPage</div>
+    <div>
+      <ContactLandingSection />
+    </div>
   )
 }
 

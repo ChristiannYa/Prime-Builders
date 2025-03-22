@@ -54,6 +54,11 @@
   }
 
   /* Screen Sizes */
+  .screen-sm {
+    width: min(90%, 800px);
+    margin-inline: auto;
+  }
+
   .screen {
     width: min(90%, 1000px);
     margin-inline: auto;
@@ -73,7 +78,6 @@
   .pageTitle {
     @apply text-5xl xl:text-7xl;
     color: var(--color-text-white);
-    /* text-shadow: 2px 2px 3px rgba(0, 0, 0); */
     font-family: var(--font-unna);
     font-weight: 500;
     text-transform: uppercase;

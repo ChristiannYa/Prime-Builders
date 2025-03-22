@@ -1,0 +1,112 @@
+.contact {
+  background-color: var(--color-secondary);
+  
+  &__form-wrapper {
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+  }
+  
+  &__success-message {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  &__form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px 0;
+  }
+  
+  &__label {
+    font-family: var(--font-nunito);
+    font-weight: 600;
+    color: var(--color-text-white);
+  }
+  
+  &__input,
+  &__textarea {
+    background-color: #ffffff10;
+    color: #ffffff80;
+    border: solid 1px transparent;
+
+    padding: 12px 10px;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+    
+    &:focus {
+      outline: none;
+      border-color: var(--color-primary);
+    }
+    
+    &--error {
+      border-color: #dc3545;
+    }
+  }
+  
+  &__error-message {
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 5px;
+  }
+  
+  &__submit-button {
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    font-family: var(--font-nunito);
+
+    padding: 14px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    
+    &:hover {
+      background-color: var(--color-primary-hover);
+    }
+    
+    &:disabled {
+      background-color: #cccccc;
+      cursor: not-allowed;
+    }
+    
+    &--loading {
+      opacity: 0.8;
+    }
+  }
+  
+  &__info {
+    font-family: var(--font-nunito);
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  &__info-card {
+    background-color: #ffffff20;
+    border-radius: 8px;
+
+    padding: 12px;
+  }
+  
+  &__info-title {
+    color: var(--color-primary);
+    font-weight: 400;
+    font-size: 1.2rem;
+  }
+  
+  &__info-text {
+    color: #ffffff90;
+    line-height: 1.5;
+  }
+}
