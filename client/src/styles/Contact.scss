@@ -1,10 +1,26 @@
 .contact {
+  $formBreathSpace: 16px;
+
   background-color: var(--color-secondary);
+
+  &__container {
+    display: flex;
+    align-items: end;
+    gap: $formBreathSpace;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
   
   &__form-wrapper {
     border-radius: 8px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     padding: 30px;
+  }
+
+  &__topText {
+    margin-bottom: $formBreathSpace;
   }
   
   &__success-message {
@@ -85,11 +101,19 @@
   
   &__info {
     font-family: var(--font-nunito);
+    
     height: 100%;
 
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: $formBreathSpace;
+
+    @media (max-width: 768px) {
+      height: fit-content;
+      
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
   
   &__info-card {
@@ -97,6 +121,10 @@
     border-radius: 8px;
 
     padding: 12px;
+
+    @media (max-width: 768px) {
+      flex-grow: 1;
+    }
   }
   
   &__info-title {

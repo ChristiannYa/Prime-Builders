@@ -1,14 +1,10 @@
+import LayeredCurvesSvg from '../../../components/LayeredCurves';
 import { companyValues } from '../../../contants/about-page';
-import aboutAssets from '../../../assets/about-page';
 
 const AboutValuesSection = () => {
   return (
     <div className="bg-neutral-300 pb-18 max-md:pb-12 pt-28 max-md:pt-18 relative">
-      <img
-        src={aboutAssets.layeredCurves}
-        alt=""
-        className="w-screen absolute-top-left"
-      />
+      <LayeredCurvesSvg />
       <div className="screen-xl">
         <h3 className="textTitle text-secondary text-center font-medium mb-7">
           Why Choose Us?

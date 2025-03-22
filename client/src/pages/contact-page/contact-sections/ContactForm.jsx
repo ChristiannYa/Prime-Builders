@@ -79,10 +79,10 @@ const ContactLandingSection = () => {
 
   return (
     <section className="contact py-26">
-      <div className='screen-lg'>
-        <div className="flex items-end gap-x-6">
+      <div className="screen-lg">
+        <div className="contact__container">
           <div className="contact__content">
-            <div className="mb-4">
+            <div className="contact__topText">
               <h1 className="pageTitle text-primary">Contact Us</h1>
               <p className="textSubtitle">
                 We&apos;d love to hear from you. Fill out the form below and
@@ -97,10 +97,7 @@ const ContactLandingSection = () => {
                 </div>
               )}
 
-              <form
-                className="flex flex-col gap-y-2"
-                onSubmit={handleSubmit}
-              >
+              <form className="flex flex-col gap-y-2" onSubmit={handleSubmit}>
                 <div className="contact__form-group">
                   <label htmlFor="name" className="contact__label">
                     Full Name
