@@ -1,4 +1,5 @@
 import { teamMembers } from '../../../contants/about-page';
+import ImageWithLoader from '../../../components/ImageWithLoader';
 
 const AboutTeam = () => {
   return (
@@ -14,11 +15,15 @@ const AboutTeam = () => {
               key={member.id}
               className="bg-white/5 rounded-sm p-4 flex flex-col items-center text-center"
             >
-              <img
-                src={member.image}
-                alt={`${member.name}, ${member.role}`}
-                className="w-36 h-3w-36 object-cover rounded-full mb-4"
-              />
+              <div className="w-36 h-36 rounded-full overflow-hidden mb-4">
+                <ImageWithLoader
+                  src={member.image}
+                  placeholderSrc={member.placeholderImage}
+                  alt={`${member.name}, ${member.role}`}
+                  className="w-full h-full object-cover"
+                  forceLoading={false}
+                />
+              </div>
               <h3 className="textSubtitle text-primary font-medium">
                 {member.name}
               </h3>

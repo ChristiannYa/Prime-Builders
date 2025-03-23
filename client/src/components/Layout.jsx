@@ -6,6 +6,9 @@ import '../styles/Contact.scss';
 import '../styles/ServicesListSection.scss';
 import '../styles/Header.scss';
 
+import '../styles/ImageWithLoader.scss';
+import '../styles/LoaderOne.scss';
+
 const Layout = () => {
   return (
     <>
