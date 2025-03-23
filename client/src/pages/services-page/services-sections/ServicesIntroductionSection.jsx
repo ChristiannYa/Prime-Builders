@@ -1,6 +1,6 @@
 const ServicesIntroductionSection = () => {
   return (
-    <section className="bg-white py-16">
+    <section className="sectionPaddingY bg-white">
       <div className="screen space-y-6">
         <p className="text text-black text-justify">
           At Prime Builders, we believe a home is more than just walls and a

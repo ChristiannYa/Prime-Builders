@@ -1,190 +1,81 @@
-import { useState } from 'react';
+import useContactForm from '../../../hooks/useContactForm.jsx';
+import FormInput from '../../../components/FormInput.jsx';
+import FormSuccessMessage from '../../../components/FormSuccessMessage.jsx';
+import ContactPageInfo from './ContactPageInfo.jsx';
 
 const ContactLandingSection = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
-
-  const [formErrors, setFormErrors] = useState({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitSuccess, setSubmitSuccess] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const validateForm = () => {
-    const errors = {};
-
-    if (!formData.name.trim()) {
-      errors.name = 'Name is required';
-    }
-
-    if (!formData.email.trim()) {
-      errors.email = 'Email is required';
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      errors.email = 'Email is invalid';
-    }
-
-    if (!formData.phone.trim()) {
-      errors.phone = 'Phone number is required';
-    } else if (!/^\d{10}$/.test(formData.phone.replace(/\D/g, ''))) {
-      errors.phone = 'Please enter a valid 10-digit phone number';
-    }
-
-    if (!formData.message.trim()) {
-      errors.message = 'Message is required';
-    }
-
-    return errors;
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    const errors = validateForm();
-    setFormErrors(errors);
-
-    if (Object.keys(errors).length === 0) {
-      setIsSubmitting(true);
-
-      // Simulate form submission
-      setTimeout(() => {
-        console.log('Form submitted:', formData);
-        setIsSubmitting(false);
-        setSubmitSuccess(true);
-
-        // Reset form after successful submission
-        setFormData({
-          name: '',
-          email: '',
-          phone: '',
-          message: '',
-        });
-
-        // Reset success message after 5 seconds
-        setTimeout(() => {
-          setSubmitSuccess(false);
-        }, 5000);
-      }, 1500);
-    }
-  };
+  const {
+    formData,
+    formErrors,
+    isSubmitting,
+    submitSuccess,
+    handleChange,
+    handleSubmit,
+  } = useContactForm();
 
   return (
-    <section className="contact py-26">
+    <section className="contact pt-[var(--header-height)] pb-16 max-md:pb-8">
       <div className="screen-lg">
         <div className="contact__container">
           <div className="contact__content">
             <div className="contact__topText">
               <h1 className="pageTitle text-primary">Contact Us</h1>
-              <p className="textSubtitle">
+              <p className="text font-monsterrat">
                 We&apos;d love to hear from you. Fill out the form below and
                 we&apos;ll get back to you as soon as possible.
               </p>
             </div>
 
             <div className="contact__form-wrapper bg-white/20">
-              {submitSuccess && (
-                <div className="contact__success-message">
-                  Thank you for your message! We&apos;ll be in touch soon.
-                </div>
-              )}
+              <FormSuccessMessage
+                show={submitSuccess}
+                message="Thank you for your message! We'll be in touch soon."
+              />
 
               <form className="flex flex-col gap-y-2" onSubmit={handleSubmit}>
-                <div className="contact__form-group">
-                  <label htmlFor="name" className="contact__label">
-                    Full Name
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your full name"
-                    className={`contact__input ${
-                      formErrors.name ? 'contact__input--error' : ''
-                    }`}
-                  />
-                  {formErrors.name && (
-                    <span className="contact__error-message">
-                      {formErrors.name}
-                    </span>
-                  )}
-                </div>
+                <FormInput
+                  label="Full Name"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  placeholder="Your full name"
+                  error={formErrors.name}
+                />
 
-                <div className="contact__form-group">
-                  <label htmlFor="email" className="contact__label">
-                    Email Address
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your email address"
-                    className={`contact__input ${
-                      formErrors.email ? 'contact__input--error' : ''
-                    }`}
-                  />
-                  {formErrors.email && (
-                    <span className="contact__error-message">
-                      {formErrors.email}
-                    </span>
-                  )}
-                </div>
+                <FormInput
+                  label="Email Address"
+                  id="email"
+                  type="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Your email address"
+                  error={formErrors.email}
+                />
 
-                <div className="contact__form-group">
-                  <label htmlFor="phone" className="contact__label">
-                    Phone Number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="Your phone number"
-                    className={`contact__input ${
-                      formErrors.phone ? 'contact__input--error' : ''
-                    }`}
-                  />
-                  {formErrors.phone && (
-                    <span className="contact__error-message">
-                      {formErrors.phone}
-                    </span>
-                  )}
-                </div>
+                <FormInput
+                  label="Phone Number"
+                  id="phone"
+                  type="tel"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  placeholder="Your phone number"
+                  error={formErrors.phone}
+                />
 
-                <div className="contact__form-group">
-                  <label htmlFor="message" className="contact__label">
-                    Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="How can we help you?"
-                    rows="5"
-                    className={`contact__textarea ${
-                      formErrors.message ? 'contact__textarea--error' : ''
-                    }`}
-                  ></textarea>
-                  {formErrors.message && (
-                    <span className="contact__error-message">
-                      {formErrors.message}
-                    </span>
-                  )}
-                </div>
+                <FormInput
+                  label="Message"
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="How can we help you?"
+                  error={formErrors.message}
+                  isTextarea={true}
+                  rows="5"
+                />
 
                 <button
                   type="submit"
@@ -199,28 +90,7 @@ const ContactLandingSection = () => {
             </div>
           </div>
 
-          <div className="contact__info">
-            <div className="contact__info-card">
-              <h3 className="contact__info-title">Our Office</h3>
-              <p className="contact__info-text">123 Construction Way</p>
-              <p className="contact__info-text">Building City, ST 12345</p>
-            </div>
-
-            <div className="contact__info-card">
-              <h3 className="contact__info-title">Contact Information</h3>
-              <p className="contact__info-text">
-                Email: info@primebuilders.com
-              </p>
-              <p className="contact__info-text">Phone: (555) 123-4567</p>
-            </div>
-
-            <div className="contact__info-card">
-              <h3 className="contact__info-title">Business Hours</h3>
-              <p className="contact__info-text">Monday - Friday: 8am - 6pm</p>
-              <p className="contact__info-text">Saturday: 9am - 2pm</p>
-              <p className="contact__info-text">Sunday: Closed</p>
-            </div>
-          </div>
+          <ContactPageInfo />
         </div>
       </div>
     </section>

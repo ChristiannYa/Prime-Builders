@@ -1,17 +1,17 @@
 import AboutLandingSection from "./about-secions/AboutLandingSection";
 import AboutIntroductionSection from "./about-secions/AboutIntroductionSection";
 import AboutValuesSection from "./about-secions/AboutValuesSection";
-import AboutTeam from "./about-secions/AboutTeam";
+import AboutTeamSection from './about-secions/AboutTeamSection';
 
 const AboutPage = () => {
   return (
     <div>
-      <AboutLandingSection/>
+      <AboutLandingSection />
       <AboutIntroductionSection />
       <AboutValuesSection />
-      <AboutTeam />
+      <AboutTeamSection />
     </div>
-  )
+  );
 }
 
 export default AboutPage

@@ -2,7 +2,7 @@ import { teamMembers } from '../../../contants/about-page';
 
 const AboutTeam = () => {
   return (
-    <div className="bg-secondary py-16 relative">
+    <div className="sectionPaddingY bg-secondary relative">
       <div className="screen-xl">
         <h3 className="textTitle text-center font-medium mb-7">
           Meet Our Team

@@ -22,7 +22,7 @@
 @layer components {
   .ctaLanding {
     background-color: transparent;
-    font-family: var(--font-nunito);
+    font-family: var(--font-monsterrat);
     border-radius: 2px;
     cursor: pointer;
     transition: background-color 0.2s ease;
@@ -43,8 +43,19 @@
   }
 
   .landingSection {
-    width: 100vw;
     height: 100vh;
+    height: -webkit-fill-available;
+    height: stretch;
+
+    overflow: hidden;
+  }
+
+  .sectionPaddingY {
+    padding-block: 64px;
+
+    @media (max-width: 768px) {
+      padding-block: 32px;
+    }
   }
 
   .aboutValues {
