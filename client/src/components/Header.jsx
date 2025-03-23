@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
 import { navLinks } from '../contants/layout';
+
 import pageAssets from '../assets/page';
 import ImageWithLoader from '../components/ImageWithLoader';
 

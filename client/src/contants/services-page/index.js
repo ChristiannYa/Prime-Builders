@@ -4,6 +4,7 @@ export const servicesList = [
   {
     id: 1,
     title: 'Custom Home Construction',
+    path: '/custom-home',
     image: serviceImages.customHome.original,
     placeholderImage: serviceImages.customHome.placeholder,
     description:
@@ -13,6 +14,7 @@ export const servicesList = [
   {
     id: 2,
     title: 'Home Renovations & Remodeling',
+    path: 'renovation',
     image: serviceImages.renovation.original,
     placeholderImage: serviceImages.renovation.placeholder,
     description:
@@ -21,6 +23,7 @@ export const servicesList = [
   },
   {
     id: 3,
+    path: 'additions',
     title: 'Additions & Expansions',
     image: serviceImages.addition.original,
     placeholderImage: serviceImages.addition.placeholder,
@@ -30,6 +33,7 @@ export const servicesList = [
   },
   {
     id: 4,
+    path: 'commercial',
     title: 'Commercial Construction & Renovation',
     image: serviceImages.commercial.original,
     placeholderImage: serviceImages.commercial.placeholder,
@@ -39,6 +43,7 @@ export const servicesList = [
   },
   {
     id: 5,
+    path: 'roofing',
     title: 'Roofing & Exterior Work',
     image: serviceImages.roofing.original,
     placeholderImage: serviceImages.roofing.placeholder,
@@ -48,6 +53,7 @@ export const servicesList = [
   },
   {
     id: 6,
+    path: 'outdoor',
     title: 'Outdoor Living Spaces',
     image: serviceImages.outdoor.original,
     placeholderImage: serviceImages.outdoor.placeholder,
@@ -57,6 +63,7 @@ export const servicesList = [
   },
   {
     id: 7,
+    path: 'sustainable',
     title: 'Sustainable & Energy-Efficient Building',
     image: serviceImages.sustainable.original,
     placeholderImage: serviceImages.sustainable.placeholder,

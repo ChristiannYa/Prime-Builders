@@ -21,13 +21,7 @@
 
 @layer components {
   .logo-wrapper {
-    width: 80px;
-  }
-
-  @media (min-width: 1024px) {
-    .logo-wrapper {
-      width: 120px;
-    }
+    @apply w-20 md:w-24 lg:w-32;
   }
 
   .ctaLanding {
@@ -157,15 +151,15 @@
     }
 
     @media (min-width: 768px) {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
     @media (min-width: 1024px) {
-      font-size: 3.75rem;
+      font-size: 3.25rem;
     }
 
     @media (min-width: 1280px) {
-      font-size: 4.5rem;
+      font-size: 3.75rem;
     }
   }
 
