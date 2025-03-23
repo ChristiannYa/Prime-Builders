@@ -1,5 +1,9 @@
 import logo from './logo.png';
+import logoSmall from './logo-small.png';
 
 export default {
-  logo,
-}
+  logo: {
+    original: logo,
+    placeholder: logoSmall,
+  },
+};

@@ -1,5 +1,6 @@
 import { servicesList } from '../../../contants/services-page';
 import { useState } from 'react';
+import ImageWithLoader from '../../../components/ImageWithLoader';
 
 const ServicesListSection = () => {
   const [hoveredId, setHoveredId] = useState(null);
@@ -15,8 +16,9 @@ const ServicesListSection = () => {
               onMouseEnter={() => setHoveredId(service.id)}
               onMouseLeave={() => setHoveredId(null)}
             >
-              <img
+              <ImageWithLoader
                 src={service.image}
+                placeholderSrc={service.placeholderImage}
                 alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-300"
               />

@@ -1,8 +1,8 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-
 import { navLinks } from '../contants/layout';
 import pageAssets from '../assets/page';
+import ImageWithLoader from '../components/ImageWithLoader';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +33,12 @@ const Header = () => {
 
   return (
     <header className="header" ref={headerRef}>
-      <img src={pageAssets.logo} alt="Prime Builders Logo" width={80} />
+      <ImageWithLoader
+        src={pageAssets.logo.original}
+        placeholderSrc={pageAssets.logo.placeholder}
+        alt="Prime Builders Logo"
+        style={{ width: '80px' }}
+      />
       <nav className="header__nav">
         <button
           className={`header__toggleBtn ${
