@@ -1,4 +1,6 @@
 import { isMobile } from 'react-device-detect';
+import VideoWithLoader from '../../components/VideoWithLoader';
+import homeAssets from '../../assets/home-page';
 
 const HomePage = () => {
   return (
@@ -7,16 +9,15 @@ const HomePage = () => {
         isMobile ? 'landingSection' : 'w-full h-screen overflow-hidden'
       }
     >
-      <video
+      <VideoWithLoader
+        src={homeAssets.homeVideo.src}
+        placeholderSrc={homeAssets.homeVideo.placeholder}
+        className="w-full h-full object-cover"
         autoPlay
         loop
         muted
         playsInline
-        className="w-full h-full object-cover"
-      >
-        <source src="/home-video-compressed.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      />
       <div className="dark-glass text-center w-full p-2 absolute-bottom-center">
         <h1 className="text-text-white textShadow font-bonanova text-super">
           Prime Builders cpt llc
