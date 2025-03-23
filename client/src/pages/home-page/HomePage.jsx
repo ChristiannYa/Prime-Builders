@@ -1,6 +1,12 @@
+import { isMobile } from 'react-device-detect';
+
 const HomePage = () => {
   return (
-    <div className="landingSection">
+    <div
+      className={
+        isMobile ? 'landingSection' : 'w-full h-screen overflow-hidden'
+      }
+    >
       <video
         autoPlay
         loop
