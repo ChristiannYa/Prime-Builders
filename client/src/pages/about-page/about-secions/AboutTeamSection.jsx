@@ -17,7 +17,7 @@ const AboutTeam = () => {
               <img
                 src={member.image}
                 alt={`${member.name}, ${member.role}`}
-                className="w-36 h-3w-36 object-cover rounded-full mb-4 border-[3px] border-primary"
+                className="w-36 h-3w-36 object-cover rounded-full mb-4"
               />
               <h3 className="textSubtitle text-primary font-medium">
                 {member.name}
