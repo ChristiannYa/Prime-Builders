@@ -21,6 +21,7 @@ const ServicesListSection = () => {
                 placeholderSrc={service.placeholderImage}
                 alt={service.title}
                 className="w-full h-full object-cover transition-transform duration-300"
+                loading="lazy"
               />
               <div
                 className={`service-overlay absolute inset-0 dark-glass flexcol-center p-4 transition-opacity duration-300 ${

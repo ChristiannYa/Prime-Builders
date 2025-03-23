@@ -22,6 +22,7 @@ const AboutTeam = () => {
                   alt={`${member.name}, ${member.role}`}
                   className="w-full h-full object-cover"
                   forceLoading={false}
+                  loading="lazy"
                 />
               </div>
               <h3 className="textSubtitle text-primary font-medium">
