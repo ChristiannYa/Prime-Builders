@@ -22,7 +22,7 @@ const ImageWithLoader = ({
   className = '',
   style = {},
   forceLoading = false,
-  ...restProps // Collect all other props like loading="lazy"
+  ...restProps
 }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
@@ -43,33 +43,34 @@ const ImageWithLoader = ({
   const effectiveLoading = forceLoading || isLoading;
 
   return (
-    <div className="image-loader-container" style={style}>
-      {/* Show placeholder image with pulsating effect */}
+    <div className="image-loader__container" style={style}>
       {placeholderSrc && effectiveLoading && (
-        <div className="placeholder-container">
+        <div className="image-loader__placeholder-container">
           <img
             src={placeholderSrc}
             alt={`${alt} placeholder`}
-            className="image-placeholder"
+            className="image-loader__placeholder"
           />
-          <div className="image-loader-overlay"></div>
+          <div className="image-loader__overlay"></div>
         </div>
       )}
 
       {hasError && !forceLoading ? (
-        <div className="image-error">
+        <div className="image-loader__error">
           <p>Failed to load image</p>
         </div>
       ) : (
         <img
           src={src}
           alt={alt}
-          className={`image-with-loader ${className} ${
-            effectiveLoading ? 'is-loading' : 'is-loaded'
+          className={`image-loader__image ${className} ${
+            effectiveLoading
+              ? 'image-loader__image--loading'
+              : 'image-loader__image--loaded'
           }`}
           onLoad={handleImageLoaded}
           onError={handleImageError}
-          {...restProps} // Include loading="lazy" and any other props
+          {...restProps}
         />
       )}
     </div>

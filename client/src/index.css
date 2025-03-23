@@ -20,6 +20,16 @@
 }
 
 @layer components {
+  .logo-wrapper {
+    width: 80px;
+  }
+
+  @media (min-width: 1024px) {
+    .logo-wrapper {
+      width: 120px;
+    }
+  }
+
   .ctaLanding {
     background-color: transparent;
     font-family: var(--font-monsterrat);

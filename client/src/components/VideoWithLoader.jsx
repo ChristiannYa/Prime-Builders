@@ -1,11 +1,11 @@
 import { useState, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-const VideoWithLoader = ({ 
-  src, 
+const VideoWithLoader = ({
+  src,
   placeholderSrc, // Static image from the video
   type = 'video/mp4',
-  className = '', 
+  className = '',
   style = {},
   autoPlay = true,
   loop = true,
@@ -19,7 +19,6 @@ const VideoWithLoader = ({
 
   useEffect(() => {
     const videoElement = videoRef.current;
-    
     if (videoElement) {
       // Check if video data is already loaded
       if (videoElement.readyState >= 3) {
@@ -38,27 +37,30 @@ const VideoWithLoader = ({
   };
 
   return (
-    <div className="video-loader-container" style={style}>
+    <div className="video-loader__container" style={style}>
       {/* Show placeholder image with pulsating effect while video loads */}
       {placeholderSrc && isLoading && (
-        <div className="placeholder-container">
+        <div className="video-loader__placeholder-container">
           <img
             src={placeholderSrc}
             alt="Video placeholder"
-            className="video-placeholder"
+            className="video-loader__placeholder"
           />
-          <div className="video-loader-overlay"></div>
+          <div className="video-loader__overlay"></div>
         </div>
       )}
-      
       {hasError ? (
-        <div className="video-error">
+        <div className="video-loader__error">
           <p>Failed to load video</p>
         </div>
       ) : (
         <video
           ref={videoRef}
-          className={`video-with-loader ${className} ${isLoading ? 'is-loading' : 'is-loaded'}`}
+          className={`video-loader__video ${className} ${
+            isLoading
+              ? 'video-loader__video--loading'
+              : 'video-loader__video--loaded'
+          }`}
           autoPlay={autoPlay}
           loop={loop}
           muted={muted}

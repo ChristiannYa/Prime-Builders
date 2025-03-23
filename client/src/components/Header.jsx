@@ -33,12 +33,14 @@ const Header = () => {
 
   return (
     <header className="header" ref={headerRef}>
-      <ImageWithLoader
-        src={pageAssets.logo.original}
-        placeholderSrc={pageAssets.logo.placeholder}
-        alt="Prime Builders Logo"
-        style={{ width: '80px' }}
-      />
+      <div className="logo-wrapper">
+        <ImageWithLoader
+          src={pageAssets.logo.original}
+          placeholderSrc={pageAssets.logo.placeholder}
+          alt="Prime Builders Logo"
+        />
+      </div>
+
       <nav className="header__nav">
         <button
           className={`header__toggleBtn ${
