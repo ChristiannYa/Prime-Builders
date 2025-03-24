@@ -1,14 +1,15 @@
 import { useState } from 'react';
+
 import { validateContactForm } from '../utils/FormValidation';
+import { formInputs } from '../contants/contact-page';
 
 const useContactForm = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
+  const initialFormState = formInputs.reduce((acc, input) => {
+    acc[input.id] = '';
+    return acc;
+  }, {});
 
+  const [formData, setFormData] = useState(initialFormState);
   const [formErrors, setFormErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -22,12 +23,7 @@ const useContactForm = () => {
   };
 
   const resetForm = () => {
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: '',
-    });
+    setFormData(initialFormState);
   };
 
   const handleSubmit = (e) => {
@@ -60,7 +56,8 @@ const useContactForm = () => {
     isSubmitting,
     submitSuccess,
     handleChange,
-    handleSubmit
+    handleSubmit,
+    formInputs,
   };
 };
 

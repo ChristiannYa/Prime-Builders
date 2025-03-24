@@ -11,6 +11,7 @@ const ContactLandingSection = () => {
     submitSuccess,
     handleChange,
     handleSubmit,
+    formInputs,
   } = useContactForm();
 
   return (
@@ -34,49 +35,21 @@ const ContactLandingSection = () => {
                 />
 
                 <form className="flex flex-col gap-y-2" onSubmit={handleSubmit}>
-                  <FormInput
-                    label="Full Name"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    placeholder="Your full name"
-                    error={formErrors.name}
-                  />
-
-                  <FormInput
-                    label="Email Address"
-                    id="email"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="Your email address"
-                    error={formErrors.email}
-                  />
-
-                  <FormInput
-                    label="Phone Number"
-                    id="phone"
-                    type="tel"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    placeholder="Your phone number"
-                    error={formErrors.phone}
-                  />
-
-                  <FormInput
-                    label="Message"
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    placeholder="How can we help you?"
-                    error={formErrors.message}
-                    isTextarea={true}
-                    rows="5"
-                  />
+                  {formInputs.map((input) => (
+                    <FormInput
+                      key={input.id}
+                      label={input.placeholder}
+                      id={input.id}
+                      type={input.label}
+                      name={input.id}
+                      value={formData[input.id]}
+                      onChange={handleChange}
+                      placeholder={`Your ${input.placeholder.toLowerCase()}`}
+                      error={formErrors[input.id]}
+                      isTextarea={input.label === 'textarea'}
+                      rows={input.label === 'textarea' ? '5' : undefined}
+                    />
+                  ))}
 
                   <button
                     type="submit"
