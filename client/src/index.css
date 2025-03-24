@@ -68,6 +68,12 @@
     gap: 16px;
   }
 
+  .footerGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+  }
+
   /* Screen Sizes */
   .screen-sm {
     width: min(90%, 800px);

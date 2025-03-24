@@ -7,6 +7,7 @@ import '../styles/Contact.scss';
 import '../styles/ServicesListSection.scss';
 import '../styles/Header.scss';
 
+import '../styles/Footer.scss';
 import '../styles/ImageWithLoader.scss';
 import '../styles/VideoWithLoader.scss';
 import '../styles/LoaderOne.scss';

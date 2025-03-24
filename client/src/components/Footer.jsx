@@ -1,27 +1,30 @@
 import { Link } from 'react-router-dom';
 import pageAssets from '../assets/page';
-import { 
-  quickLinks, 
-  serviceLinks, 
-  contactInfo, 
-  socialLinks, 
-  companyInfo 
+import {
+  quickLinks,
+  serviceLinks,
+  contactInfo,
+  socialLinks,
+  companyInfo,
 } from '../contants/footer/index';
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary pt-6">
-      <div className="screen-lg">
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <footer className="footer">
+      <div className="footer__container screen-lg">
+        <div className="footer__grid">
           {/* Logo and Company Info */}
-          <div className="flexcol space-y-2">
-            <div className="logo-footer-wrapper">
-              <img src={pageAssets.logo.original} alt="" className='w-24 max-md:w-16' loading='lazy' />
+          <div className="footer__column footer__column--brand">
+            <div className="footer__logo-wrapper">
+              <img
+                src={pageAssets.logo.original}
+                alt={companyInfo.name}
+                className="footer__logo"
+                loading="lazy"
+              />
             </div>
-            <p className="textCard">
-              {companyInfo.name}
-            </p>
-            <div className="flex space-x-2">
+            <p className="footer__company-name textCard">{companyInfo.name}</p>
+            <div className="footer__social-links">
               {/* Social Media Icons */}
               {socialLinks.map((social, index) => (
                 <a
@@ -29,7 +32,7 @@ const Footer = () => {
                   href={social.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-primary-hover transition-colors"
+                  className="footer__social-link"
                   aria-label={social.name}
                 >
                   {social.icon}
@@ -39,15 +42,12 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="flexcol space-y-2">
-            <h3 className="textSubtitle">Quick Links</h3>
-            <ul className="space-y-2">
+          <div className="footer__column footer__column--links">
+            <h3 className="footer__heading textSubtitle">Quick Links</h3>
+            <ul className="footer__link-list">
               {quickLinks.map((link, index) => (
-                <li key={index}>
-                  <Link
-                    to={link.path}
-                    className="textCard hover:text-primary transition-colors"
-                  >
+                <li key={index} className="footer__link-item">
+                  <Link to={link.path} className="footer__link">
                     {link.name}
                   </Link>
                 </li>
@@ -56,15 +56,12 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="flexcol space-y-2">
-            <h3 className="textSubtitle">Our Services</h3>
-            <ul className="space-y-2">
+          <div className="footer__column footer__column--services">
+            <h3 className="footer__heading textSubtitle">Our Services</h3>
+            <ul className="footer__link-list">
               {serviceLinks.map((service, index) => (
-                <li key={index}>
-                  <Link
-                    to={service.path}
-                    className="textCard hover:text-primary transition-colors"
-                  >
+                <li key={index} className="footer__link-item">
+                  <Link to={service.path} className="footer__link">
                     {service.name}
                   </Link>
                 </li>
@@ -73,13 +70,13 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="flexcol space-y-2">
-            <h3 className="textSubtitle">Contact Us</h3>
-            <div className="space-y-3">
+          <div className="footer__column footer__column--contact">
+            <h3 className="footer__heading textSubtitle">Contact Us</h3>
+            <div className="footer__contact-list">
               {contactInfo.map((info, index) => (
-                <p key={index} className="textCard flex items-start">
-                  {info.icon}
-                  {info.value}
+                <p key={index} className="footer__contact-item">
+                  <span className="footer__contact-icon">{info.icon}</span>
+                  <span className="footer__contact-text">{info.value}</span>
                 </p>
               ))}
             </div>
@@ -87,9 +84,10 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="mt-4 py-4 max-md:py-2 border-t border-secondary-2 text-center">
-          <p className="text-small text-text-white/60 font-nunito">
-            © {new Date().getFullYear()} {companyInfo.name}. All rights reserved.
+        <div className="footer__copyright">
+          <p className="footer__copyright-text">
+            Copyright © {new Date().getFullYear()} {companyInfo.name}. All
+            rights reserved.
           </p>
         </div>
       </div>
