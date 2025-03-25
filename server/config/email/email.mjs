@@ -1,7 +1,11 @@
 export const emailConfig = {
-  service: 'gmail',
+  service: process.env.EMAIL_SERVICE || 'gmail',
   auth: {
-    user: 'your-email@gmail.com',
-    pass: 'your-password',
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
+  },
+  secure: true,
+  tls: {
+    rejectUnauthorized: true,
   },
 };

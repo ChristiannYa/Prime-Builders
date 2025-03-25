@@ -34,6 +34,12 @@ const ContactLandingSection = () => {
                   message="Thank you for your message! We'll be in touch soon."
                 />
 
+                {formErrors.submit && (
+                  <div className="error-message mb-4 p-3 bg-red-100 text-red-700 rounded">
+                    {formErrors.submit}
+                  </div>
+                )}
+
                 <form className="flex flex-col gap-y-2" onSubmit={handleSubmit}>
                   {formInputs.map((input) => (
                     <FormInput
