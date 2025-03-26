@@ -16,8 +16,24 @@ const ContactForm = () => {
     closeMessageSent,
   } = useContactForm();
 
-  // For development: set to true to see the notification
+  // Only enable this in development mode
   const [forceShowNotification, setForceShowNotification] = useState(false);
+
+  // Development-only toggle button
+  const DevTools = () => {
+    if (!import.meta.env.DEV) return null;
+
+    return (
+      <div className="fixed bottom-4 right-4 z-50 bg-gray-800 text-white p-2 rounded">
+        <button
+          onClick={() => setForceShowNotification(!forceShowNotification)}
+          className="px-2 py-1 bg-secondary-2 rounded"
+        >
+          {forceShowNotification ? 'Hide' : 'Show'} Notification
+        </button>
+      </div>
+    );
+  };
 
   return (
     <section className="contact min-h-screen">
@@ -77,13 +93,16 @@ const ContactForm = () => {
 
       {/* Success Notification */}
       <SuccessNotification
-        show={forceShowNotification || showMessageSent}
+        show={(import.meta.env.DEV && forceShowNotification) || showMessageSent}
         onClose={() => {
           closeMessageSent();
-          setForceShowNotification(false);
+          if (import.meta.env.DEV) setForceShowNotification(false);
         }}
         message="Thank you for contacting us. We'll be in touch soon."
       />
+
+      {/* Development tools */}
+      <DevTools />
     </section>
   );
 };
