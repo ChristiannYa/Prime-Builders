@@ -1,27 +1,34 @@
 import PropTypes from 'prop-types';
 
-const FormInput = ({ 
-  label, 
-  id, 
-  type = "text", 
-  name, 
-  value, 
-  onChange, 
-  placeholder, 
-  error, 
+const FormInput = ({
+  label,
+  id,
+  type = 'text',
+  name,
+  value,
+  onChange,
+  placeholder,
+  error,
   isTextarea = false,
-  rows
+  rows,
+  isRequired = false,
 }) => {
-  const inputClasses = `${isTextarea ? 'contact__textarea' : 'contact__input'} ${
-    error ? (isTextarea ? 'contact__textarea--error' : 'contact__input--error') : ''
+  const inputClasses = `${
+    isTextarea ? 'contact__textarea' : 'contact__input'
+  } ${
+    error
+      ? isTextarea
+        ? 'contact__textarea--error'
+        : 'contact__input--error'
+      : ''
   }`;
 
   return (
     <div className="contact__form-group">
       <label htmlFor={id} className="contact__label">
-        {label}
+        {label} {isRequired && <span className="text-red-500">*</span>}
       </label>
-      
+
       {isTextarea ? (
         <textarea
           id={id}
@@ -29,8 +36,9 @@ const FormInput = ({
           value={value}
           onChange={onChange}
           placeholder={placeholder}
-          rows={rows || "5"}
+          rows={rows || '5'}
           className={inputClasses}
+          // No required attribute to use custom validation
         ></textarea>
       ) : (
         <input
@@ -41,14 +49,11 @@ const FormInput = ({
           onChange={onChange}
           placeholder={placeholder}
           className={inputClasses}
+          // No required attribute to use custom validation
         />
       )}
-      
-      {error && (
-        <span className="contact__error-message">
-          {error}
-        </span>
-      )}
+
+      {error && <span className="contact__error-message">{error}</span>}
     </div>
   );
 };
@@ -64,6 +69,7 @@ FormInput.propTypes = {
   error: PropTypes.string,
   isTextarea: PropTypes.bool,
   rows: PropTypes.number,
+  isRequired: PropTypes.bool,
 };
 
 export default FormInput;

@@ -38,7 +38,7 @@ const SuccessNotification = ({
       // Wait for the animation to complete before removing from DOM
       const removeTimer = setTimeout(() => {
         setIsInDOM(false);
-      }, 500); // Match this to your transition duration
+      }, 500);
 
       return () => clearTimeout(removeTimer);
     }

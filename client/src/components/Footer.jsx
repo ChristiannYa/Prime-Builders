@@ -61,9 +61,7 @@ const Footer = () => {
             <ul className="footer__link-list">
               {serviceLinks.map((service, index) => (
                 <li key={index} className="footer__link-item">
-                  <Link to={service.path} className="footer__link">
-                    {service.name}
-                  </Link>
+                  <span className="footer__text">{service.name}</span>
                 </li>
               ))}
             </ul>

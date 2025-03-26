@@ -70,6 +70,7 @@ const ContactForm = () => {
                       error={formErrors[input.id]}
                       isTextarea={input.label === 'textarea'}
                       rows={input.label === 'textarea' ? '5' : undefined}
+                      isRequired={input.isRequired}
                     />
                   ))}
 

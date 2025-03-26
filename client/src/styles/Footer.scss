@@ -65,6 +65,14 @@
     }
   }
 
+  &__text {
+    font-family: var(--font-nunito);
+    font-weight: 300;
+    font-size: 1rem;
+    color: #ffffff90;
+    letter-spacing: 0.5px;
+  }
+
   &__contact-list {
     display: flex;
     flex-direction: column;
