@@ -1,18 +1,23 @@
+import { useState } from 'react';
 import useContactForm from '../../../hooks/useContactForm.jsx';
 import FormInput from '../../../components/FormInput.jsx';
-import FormSuccessMessage from '../../../components/FormSuccessMessage.jsx';
+import SuccessNotification from '../../../components/SuccessNotification.jsx';
 import ContactPageInfo from './ContactPageInfo.jsx';
 
-const ContactLandingSection = () => {
+const ContactForm = () => {
   const {
     formData,
     formErrors,
     isSubmitting,
-    submitSuccess,
     handleChange,
     handleSubmit,
     formInputs,
+    showMessageSent,
+    closeMessageSent,
   } = useContactForm();
+
+  // For development: set to true to see the notification
+  const [forceShowNotification, setForceShowNotification] = useState(false);
 
   return (
     <section className="contact min-h-screen">
@@ -29,11 +34,6 @@ const ContactLandingSection = () => {
               </div>
 
               <div className="contact__form-wrapper bg-white/20">
-                <FormSuccessMessage
-                  show={submitSuccess}
-                  message="Thank you for your message! We'll be in touch soon."
-                />
-
                 {formErrors.submit && (
                   <div className="error-message mb-4 p-3 bg-red-100 text-red-700 rounded">
                     {formErrors.submit}
@@ -74,8 +74,18 @@ const ContactLandingSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Success Notification */}
+      <SuccessNotification
+        show={forceShowNotification || showMessageSent}
+        onClose={() => {
+          closeMessageSent();
+          setForceShowNotification(false);
+        }}
+        message="Thank you for contacting us. We'll be in touch soon."
+      />
     </section>
   );
 };
 
-export default ContactLandingSection;
+export default ContactForm;

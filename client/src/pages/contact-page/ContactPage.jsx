@@ -1,11 +1,11 @@
-import ContactLandingSection from "./contact-sections/ContactForm"
+import ContactForm from './contact-sections/ContactForm';
 
 const ContactPage = () => {
   return (
     <div>
-      <ContactLandingSection />
+      <ContactForm />
     </div>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;
