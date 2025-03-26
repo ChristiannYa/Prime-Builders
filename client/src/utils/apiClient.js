@@ -1,10 +1,11 @@
 const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+console.log('API_BASE_URL:', API_BASE_URL);
 
 export const apiClient = {
   post: async (endpoint, data) => {
     const url = `${API_BASE_URL}${endpoint}`;
-    // console.log('Sending request to:', url);
-    
+    console.log('Sending request to:', url);
+
     const response = await fetch(url, {
       method: 'POST',
       headers: {
@@ -12,7 +13,7 @@ export const apiClient = {
       },
       body: JSON.stringify(data),
     });
-    
+
     // Handle non-JSON responses
     let responseData;
     try {
@@ -23,11 +24,11 @@ export const apiClient = {
       console.error('Parse error:', err.message);
       throw new Error('Server returned an invalid response');
     }
-    
+
     if (!response.ok) {
       throw new Error(responseData.message || 'An error occurred');
     }
-    
+
     return responseData;
   },
 };
