@@ -1,10 +1,9 @@
-const API_BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
-console.log('API_BASE_URL:', API_BASE_URL);
+const API_BASE_URL =
+  import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
 
 export const apiClient = {
   post: async (endpoint, data) => {
     const url = `${API_BASE_URL}${endpoint}`;
-    console.log('Sending request to:', url);
 
     const response = await fetch(url, {
       method: 'POST',
