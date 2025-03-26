@@ -48,19 +48,29 @@ const SuccessNotification = ({
   if (!isInDOM) return null;
 
   return (
-    <div 
-      // 101 as z-index because header has 100 
-      className={`fixed top-0 left-1/2 -translate-x-1/2 z-[101] max-w-md transform transition-all duration-500 ${
-        isVisible ? 'translate-y-10' : '-translate-y-full'
+    <div
+      // 101 as z-index because header has 100
+      className={`fixed top-0 left-1/2 -translate-x-1/2 z-[101] w-[300px] sm:w-sm md:w-md lg:w-lg transform transition-all duration-500 ${
+        isVisible ? 'translate-y-8 lg:translate-y-12' : '-translate-y-full'
       }`}
     >
-      <div className="bg-primary text-text-white p-4 rounded-lg shadow-lg flex items-start">
-        <div className="flex-shrink-0 mr-3">
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+      <div className="bg-primary text-text-white p-2 md:p-3 lg:p-4 rounded-lg shadow-lg flex items-start gap-2">
+        <div>
+          <svg
+            className="h-6 w-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M5 13l4 4L19 7"
+            />
           </svg>
         </div>
-        <div className="flex-1">
+        <div className="">
           <p className="font-monsterrat">{message}</p>
         </div>
         <button
@@ -68,10 +78,20 @@ const SuccessNotification = ({
             setIsVisible(false);
             if (onClose) onClose();
           }}
-          className="ml-4 text-white hover:text-white/80"
+          className="text-white hover:text-white/80"
         >
-          <svg className="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          <svg
+            className="h-5 w-5 cursor-pointer"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M6 18L18 6M6 6l12 12"
+            />
           </svg>
         </button>
       </div>
