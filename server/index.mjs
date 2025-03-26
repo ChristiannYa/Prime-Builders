@@ -20,12 +20,6 @@ app.use('/api/contact', contactRoutes);
 
 app.use(errorHandler);
 
-console.log('Email config:', {
-  service: process.env.EMAIL_SERVICE,
-  user: process.env.EMAIL_USER,
-  passLength: process.env.EMAIL_PASS ? process.env.EMAIL_PASS.length : 0,
-});
-
 // Start server
 app.listen(config.port, () => {
   console.log(`Server running on port ${config.port}`);
