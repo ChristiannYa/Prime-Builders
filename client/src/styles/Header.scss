@@ -130,6 +130,10 @@
         position: relative;
         z-index: 1;
 
+        @media (max-width: 768px) {
+          padding-right: 12px;
+        }
+
         &::before {
           content: '';
           background-color: var(--color-primary);
@@ -175,7 +179,7 @@
 
         @media (max-width: 768px) {
           border-left: solid 1px var(--color-primary);
-          padding-left: 6px;
+          padding-left: 10px;
 
           &::before {
             border-top-left-radius: 0;

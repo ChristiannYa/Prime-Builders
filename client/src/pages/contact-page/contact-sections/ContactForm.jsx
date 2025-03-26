@@ -49,7 +49,7 @@ const ContactForm = () => {
                 </p>
               </div>
 
-              <div className="contact__form-wrapper bg-white/20">
+              <div className="contact__form-wrapper bg-white/15">
                 {formErrors.submit && (
                   <div className="error-message mb-4 p-3 bg-red-100 text-red-700 rounded">
                     {formErrors.submit}

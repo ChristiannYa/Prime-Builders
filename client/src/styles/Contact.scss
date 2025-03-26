@@ -14,8 +14,7 @@
   }
   
   &__form-wrapper {
-    border-radius: 8px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
 
     padding: 30px;
   }
@@ -38,10 +37,10 @@
   
   &__input,
   &__textarea {
-    background-color: #ffffff10;
+    background-color: rgba(255, 255, 255, 0.05);
     border: solid 1px transparent;
-    border-radius: 4px;
-    color: #ffffff80;
+    border-radius: 1px;
+    color: #ffffff90;
     font-size: 1rem;
     transition: border-color 0.3s;
 
@@ -66,7 +65,7 @@
   
   &__submit-button {
     background-color: var(--color-primary);
-    border-radius: 4px;
+    border-radius: 6px;
     border: none;
     color: white;
     cursor: pointer;
