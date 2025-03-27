@@ -26,7 +26,7 @@ const FormInput = ({
   return (
     <div className="contact__form-group">
       <label htmlFor={id} className="contact__label">
-        {label} {isRequired && <span className="text-red-500">*</span>}
+        {label} {isRequired && <span className="text-text-white">*</span>}
       </label>
 
       {isTextarea ? (

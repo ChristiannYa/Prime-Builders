@@ -54,7 +54,7 @@ const HomePage = () => {
         </h1>
         <div ref={contentRef} className="space-y-1">
           <div className="text-text-white font-nunito text-medium">
-            <h2 className="font-monsterrat max-sm:text-sm">
+            <h2 className="font-bonanova max-sm:text-sm">
               Crafting Quality, Building Trust
             </h2>
             <h2 className="font-monsterrat max-sm:text-sm">
