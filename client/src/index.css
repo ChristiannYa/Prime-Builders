@@ -17,6 +17,7 @@
 
   --shadow-nav: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
   --shadow-card: rgba(0, 0, 0, 0.2) 4px 4px 3px 1px;
+  --shadow-img: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 @layer components {
@@ -24,8 +25,8 @@
     @apply w-20 md:w-24 lg:w-32;
   }
 
-  .ctaLanding {
-    background-color: transparent;
+  .ctaLandingHover {
+    background-color: var(--color-secondary);
     font-family: var(--font-monsterrat);
     border-radius: 2px;
     cursor: pointer;
@@ -38,6 +39,16 @@
         background-color: var(--color-primary-hover);
       }
     }
+  }
+
+  .ctaLandingNoHover {
+    background-color: transparent;
+    font-family: var(--font-monsterrat);
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    padding: 4px 8px;
   }
 
   .dark-glass {

@@ -10,6 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const ServicesListSection = () => {
   const [hoveredId, setHoveredId] = useState(null);
   const servicesRef = useRef([]);
+  const containerRef = useRef(null);
 
   useEffect(() => {
     servicesRef.current = servicesRef.current.slice(0, servicesList.length);
@@ -20,27 +21,30 @@ const ServicesListSection = () => {
 
     if (elements.length === 0) return;
 
-    elements.forEach((element) => {
-      gsap.set(element, {
-        opacity: 0,
-        y: 50,
-        scale: 0.8,
-      });
+    gsap.set(elements, {
+      opacity: 0,
+      y: 50,
+      scale: 0.8,
+    });
 
-      gsap.to(element, {
-        opacity: 1,
-        y: 0,
-        scale: 1,
-        duration: 0.9,
-        ease: 'power2.out',
-        scrollTrigger: {
-          trigger: element,
-          start: 'top bottom-=50',
-          end: 'top center',
-          toggleActions: 'play none none none',
-          // markers: true,
-        },
-      });
+    gsap.to(elements, {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      duration: 0.9,
+      ease: 'power2.out',
+      stagger: {
+        amount: 0.6,
+        from: 'start',
+        ease: 'power1.inOut',
+      },
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: 'top bottom-=50',
+        end: 'bottom center',
+        toggleActions: 'play none none none',
+        // markers: true,
+      },
     });
 
     return () => {
@@ -51,7 +55,7 @@ const ServicesListSection = () => {
   return (
     <div>
       <div className="p-1">
-        <div className="servicesGrid">
+        <div className="servicesGrid" ref={containerRef}>
           {servicesList.map((service, index) => (
             <div
               key={service.id}
@@ -72,10 +76,10 @@ const ServicesListSection = () => {
                   hoveredId === service.id ? 'active' : ''
                 }`}
               >
-                <h3 className="text-white text-xl font-bold mb-2 text-center">
+                <h3 className="text-white text-lg md:text-xl font-bold text-center">
                   {service.title}
                 </h3>
-                <p className="text-white text-sm text-center">
+                <p className="text-white text-sm md:text-base text-center">
                   {service.description}
                 </p>
               </div>

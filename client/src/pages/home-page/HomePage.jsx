@@ -62,8 +62,10 @@ const HomePage = () => {
             </h2>
           </div>
           <div className="text-white flexrow-center gap-x-4">
-            <button className="ctaLanding text-normal">123-456-7890</button>
-            <button className="ctaLanding text-normal">Contact Us</button>
+            <button className="ctaLandingNover text-normal underline underline-offset-8">
+              123-456-7890
+            </button>
+            <button className="ctaLandingHover text-normal">Contact Us</button>
           </div>
         </div>
       </div>

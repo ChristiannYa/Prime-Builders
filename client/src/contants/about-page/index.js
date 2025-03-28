@@ -22,12 +22,12 @@ export const companyValues = [
 export const teamMembers = [
   {
     id: 1,
-    name: 'Carlos Rivera',
+    name: 'John Doe',
     role: 'Founder & Lead Contractor',
     image: aboutAssets.team.male1.original,
     placeholderImage: aboutAssets.team.male1.placeholder,
     description:
-      'With over 15 years in the construction industry, Carlos started [Company Name] to bring high-quality craftsmanship to local communities. His expertise in home building, remodeling, and project management ensures that every house is built to perfection.',
+      'With over 15 years in the construction industry, John started Prime Builders to bring high-quality craftsmanship to local communities. His expertise in home building, remodeling, and project management ensures that every house is built to perfection.',
   },
   {
     id: 2,
@@ -58,11 +58,11 @@ export const teamMembers = [
   },
   {
     id: 5,
-    name: 'Elena Martínez',
+    name: 'Jane Doe',
     role: 'Interior Design Specialist',
     image: aboutAssets.team.female2.original,
     placeholderImage: aboutAssets.team.female2.placeholder,
     description:
-      'Elena brings warmth and style to every project, ensuring homes are not only well-built but also beautifully designed. Her keen eye for detail and passion for interior aesthetics complete the dream home experience.',
+      'Jane brings warmth and style to every project, ensuring homes are not only well-built but also beautifully designed. Her keen eye for detail and passion for interior aesthetics complete the dream home experience.',
   },
 ];
