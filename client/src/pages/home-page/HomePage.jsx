@@ -1,6 +1,8 @@
 import { isMobile } from 'react-device-detect';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { Link } from 'react-router-dom';
+
 import VideoWithLoader from '../../components/VideoWithLoader';
 import homeAssets from '../../assets/home-page';
 
@@ -65,7 +67,9 @@ const HomePage = () => {
             <button className="ctaLandingNover text-normal">
               123-456-7890
             </button>
-            <button className="ctaLandingHover text-normal">Contact Us</button>
+            <Link to="/contact" className="ctaLandingHover text-normal">
+              Contact Us
+            </Link>
           </div>
         </div>
       </div>
