@@ -33,13 +33,6 @@
 
   &__item {
     overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-
-    @media (hover: hover) {
-      &:hover {
-        transform: translateY(-0.3rem);
-      }
-    }
   }
 
   &__image {

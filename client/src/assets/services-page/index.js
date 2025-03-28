@@ -44,26 +44,32 @@ export default {
 
   recentWork: [
     {
+      key: 1,
       original: recentWork1,
       placeholder: recentWork1Small,
     },
     {
+      key: 2,
       original: recentWork2,
       placeholder: recentWork2Small,
     },
     {
+      key: 3,
       original: recentWork3,
       placeholder: recentWork3Small,
     },
     {
+      key: 4,
       original: recentWork4,
       placeholder: recentWork4Small,
     },
     {
+      key: 5,
       original: recentWork5,
       placeholder: recentWork5Small,
     },
     {
+      key: 6,
       original: recentWork6,
       placeholder: recentWork6Small,
     },

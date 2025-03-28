@@ -13,7 +13,6 @@ const AboutLandingSection = () => {
           placeholderSrc={aboutAssets.about.placeholder}
           className="wh-full object-cover"
           alt="Team members group photo"
-          forceLoading={false}
         />
 
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
