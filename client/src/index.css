@@ -26,7 +26,7 @@
   }
 
   .translateBtn {
-    @apply text-text-white font-monsterrat font-semibold text-sm rounded-full hover:cursor-pointer hover:text-primary w-8 h-8 -mr-1;
+    @apply text-text-white font-monsterrat font-semibold text-sm rounded-full hover:cursor-pointer hover:text-primary mr-0.5 md:mr-2;
   }
 
   .ctaLandingHover {
