@@ -35,20 +35,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div
-      className={
-        isMobile ? 'landingSection' : 'w-full h-screen overflow-hidden'
-      }
-    >
-      {/* <VideoWithLoader
-        src={homeAssets.homeVideo.src}
-        placeholderSrc={homeAssets.homeVideo.placeholder}
-        className="w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-      /> */}
+    <div className="wh-screen">
       <ImageWithLoader
         src={homeAssets.home.original}
         placeholderSrc={homeAssets.home.placeholder}
