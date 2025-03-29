@@ -1,10 +1,10 @@
-import { servicesList } from '../../../contants/services-page';
 import { useState, useEffect, useRef } from 'react';
-import ImageWithLoader from '../../../components/ImageWithLoader';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-// Register the ScrollTrigger plugin
+import { getServicesList } from '../../../contants/services-page';
+import ImageWithLoader from '../../../components/ImageWithLoader';
+
 gsap.registerPlugin(ScrollTrigger);
 
 const ServicesListSection = () => {
@@ -12,9 +12,14 @@ const ServicesListSection = () => {
   const servicesRef = useRef([]);
   const containerRef = useRef(null);
 
+  const translatedServices = getServicesList();
+
   useEffect(() => {
-    servicesRef.current = servicesRef.current.slice(0, servicesList.length);
-  }, []);
+    servicesRef.current = servicesRef.current.slice(
+      0,
+      translatedServices.length
+    );
+  }, [translatedServices.length]);
 
   useEffect(() => {
     const elements = servicesRef.current.filter((item) => item);
@@ -56,7 +61,7 @@ const ServicesListSection = () => {
     <div>
       <div className="p-1">
         <div className="servicesGrid" ref={containerRef}>
-          {servicesList.map((service, index) => (
+          {translatedServices.map((service, index) => (
             <div
               key={service.id}
               ref={(el) => (servicesRef.current[index] = el)}

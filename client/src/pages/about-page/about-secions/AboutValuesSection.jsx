@@ -1,16 +1,20 @@
+import { useTranslation } from 'react-i18next';
 import LayeredCurvesSvg from '../../../components/LayeredCurves';
-import { companyValues } from '../../../contants/about-page';
+import { getCompanyValues } from '../../../contants/about-page';
 
 const AboutValuesSection = () => {
+  const { t } = useTranslation();
+  const translatedValues = getCompanyValues();
+
   return (
     <div className="bg-neutral-300 pb-18 max-md:pb-12 pt-28 max-md:pt-18 relative">
       <LayeredCurvesSvg />
       <div className="screen-xl">
         <h3 className="textTitle text-secondary text-center font-medium mb-7">
-          Why Choose Us?
+          {t('about.values.sectionTitle')}
         </h3>
         <div className="aboutValues">
-          {companyValues.map((value, index) => (
+          {translatedValues.map((value, index) => (
             <div
               key={index}
               className="bg-neutral-200 rounded-sm shadow-card p-3"

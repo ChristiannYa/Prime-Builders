@@ -1,16 +1,20 @@
-import { teamMembers } from '../../../contants/about-page';
+import { useTranslation } from 'react-i18next';
+import { getTeamMembers } from '../../../contants/about-page';
 import ImageWithLoader from '../../../components/ImageWithLoader';
 
 const AboutTeam = () => {
+  const { t } = useTranslation();
+  const translatedTeamMembers = getTeamMembers();
+
   return (
     <div className="sectionPaddingY bg-secondary relative">
       <div className="screen-xl">
         <h3 className="textTitle text-center font-medium mb-7">
-          Meet Our Team
+          {t('about.team.sectionTitle')}
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {teamMembers.map((member) => (
+          {translatedTeamMembers.map((member) => (
             <div
               key={member.id}
               className="bg-white/5 rounded-sm p-4 flex flex-col items-center text-center"

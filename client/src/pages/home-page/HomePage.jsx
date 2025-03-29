@@ -2,11 +2,13 @@ import { isMobile } from 'react-device-detect';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 import VideoWithLoader from '../../components/VideoWithLoader';
 import homeAssets from '../../assets/home-page';
 
 const HomePage = () => {
+  const { t } = useTranslation();
   const titleRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -28,7 +30,7 @@ const HomePage = () => {
         duration: 0.3,
         ease: 'power2.out',
       },
-      '-=1' // Start 1 second(s) before the title animation completes
+      '-=1'
     );
   }, []);
 
@@ -57,10 +59,10 @@ const HomePage = () => {
         <div ref={contentRef} className="space-y-1">
           <div className="text-text-white font-nunito text-medium">
             <h2 className="font-bonanova max-sm:text-sm">
-              Crafting Quality, Building Trust
+              {t('home.tagline')}
             </h2>
             <h2 className="font-monsterrat max-sm:text-sm">
-              Ready to build your dream home? Get a free consultation today!
+              {t('home.callToAction')}
             </h2>
           </div>
           <div className="text-white flexrow-center gap-x-4">
@@ -68,7 +70,7 @@ const HomePage = () => {
               123-456-7890
             </button>
             <Link to="/contact" className="ctaLandingHover text-normal">
-              Contact Us
+              {t('home.contactButton')}
             </Link>
           </div>
         </div>

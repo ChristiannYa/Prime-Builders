@@ -1,22 +1,28 @@
-export const navLinks = [
-  {
-    id: 1,
-    path: '/',
-    label: 'Home',
-  },
-  {
-    id: 2,
-    path: '/about',
-    label: 'About Us',
-  },
-  {
-    id: 3,
-    path: '/services',
-    label: 'Services',
-  },
-  {
-    id: 4,
-    path: '/contact',
-    label: 'Contact',
-  },
-];
+import i18next from 'i18next';
+
+export const getNavLinks = () => {
+  const t = i18next.t;
+
+  return [
+    {
+      id: 1,
+      path: '/',
+      label: t('header.nav.home'),
+    },
+    {
+      id: 2,
+      path: '/about',
+      label: t('header.nav.about'),
+    },
+    {
+      id: 3,
+      path: '/services',
+      label: t('header.nav.services'),
+    },
+    {
+      id: 4,
+      path: '/contact',
+      label: t('header.nav.contact'),
+    },
+  ];
+};

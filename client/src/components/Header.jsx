@@ -1,13 +1,17 @@
 import { useState, useEffect, useRef } from 'react';
 import { NavLink } from 'react-router-dom';
-import { navLinks } from '../contants/layout';
+import { useTranslation } from 'react-i18next';
+import { getNavLinks } from '../contants/layout';
 
+import LanguageSwitcher from './LanguageSwitcher';
 import pageAssets from '../assets/page';
 import ImageWithLoader from '../components/ImageWithLoader';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const headerRef = useRef(null);
+  const navLinks = getNavLinks();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -48,7 +52,7 @@ const Header = () => {
             isMenuOpen ? 'header__toggleBtn--open' : ''
           }`}
           onClick={toggleMenu}
-          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-label={isMenuOpen ? t('header.closeMenu') : t('header.openMenu')}
         >
           <span className="header__toggleBtn-burger"></span>
         </button>
@@ -66,6 +70,7 @@ const Header = () => {
             </li>
           ))}
         </ul>
+        <LanguageSwitcher />
       </nav>
     </header>
   );

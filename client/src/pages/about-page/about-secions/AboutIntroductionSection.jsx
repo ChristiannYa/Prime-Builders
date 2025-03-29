@@ -1,34 +1,24 @@
+import { useTranslation } from 'react-i18next';
+
 const AboutIntroductionSection = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="sectionPaddingY bg-secondary">
       <div className="screen space-y-4">
         <div className="space-y-2">
           <h3 className="textTitle">Prime Builders CPT</h3>
           <p className="text text-justify">
-            We are a construction company dedicated to building high-quality,
-            durable, and beautifully designed homes. With strong values and a
-            passion for craftsmanship, we bring a unique touch to every
-            project—combining tradition, innovation, and attention to detail.
+            {t('about.introduction.description')}
           </p>
         </div>
         <div className="space-y-2">
-          <h3 className="textTitle">Who we are</h3>
-          <p className="text text-justify">
-            Founded by a team of skilled builders and designers, Prime Builders
-            was created to provide families with high-quality homes they can
-            truly be proud of. Our bilingual team, fluent in both English and
-            Spanish, ensures a smooth, clear, and stress-free building process,
-            making your vision a reality with expert craftsmanship and care.
-          </p>
+          <h3 className="textTitle">{t('about.whoWeAre.title')}</h3>
+          <p className="text text-justify">{t('about.whoWeAre.description')}</p>
         </div>
         <div className="space-y-2">
-          <h3 className="textTitle">Our Mission</h3>
-          <p className="text text-justify">
-            We strive to build more than just houses—we create homes that stand
-            the test of time. Our mission is to provide top-quality construction
-            services while staying true to our values of excellence, community,
-            and trust.
-          </p>
+          <h3 className="textTitle">{t('about.mission.title')}</h3>
+          <p className="text text-justify">{t('about.mission.description')}</p>
         </div>
       </div>
     </section>

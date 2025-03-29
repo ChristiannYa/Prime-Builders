@@ -25,6 +25,10 @@
     @apply w-20 md:w-24 lg:w-32;
   }
 
+  .translateBtn {
+    @apply bg-white font-nunito font-semibold text-xs rounded-full hover:cursor-pointer hover:bg-white/90 w-8 h-8;
+  }
+
   .ctaLandingHover {
     background-color: var(--color-secondary);
     font-family: var(--font-monsterrat);

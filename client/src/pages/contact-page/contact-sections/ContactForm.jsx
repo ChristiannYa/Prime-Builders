@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import useContactForm from '../../../hooks/useContactForm.jsx';
 import FormInput from '../../../components/FormInput.jsx';
 import SuccessNotification from '../../../components/SuccessNotification.jsx';
 import ContactPageInfo from './ContactPageInfo.jsx';
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const {
     formData,
     formErrors,
@@ -16,10 +18,8 @@ const ContactForm = () => {
     closeMessageSent,
   } = useContactForm();
 
-  // Only enable this in development mode
   const [forceShowNotification, setForceShowNotification] = useState(false);
 
-  // Development-only toggle button
   const DevTools = () => {
     if (!import.meta.env.DEV) return null;
 
@@ -42,10 +42,9 @@ const ContactForm = () => {
           <div className="contact__container">
             <div className="contact__content">
               <div className="contact__topText">
-                <h1 className="pageTitle text-primary">Contact Us</h1>
+                <h1 className="pageTitle text-primary">{t('contact.title')}</h1>
                 <p className="text font-monsterrat">
-                  We&apos;d love to hear from you. Fill out the form below and
-                  we&apos;ll get back to you as soon as possible.
+                  {t('contact.introduction')}
                 </p>
               </div>
 
@@ -66,7 +65,9 @@ const ContactForm = () => {
                       name={input.id}
                       value={formData[input.id]}
                       onChange={handleChange}
-                      placeholder={`Your ${input.placeholder.toLowerCase()}`}
+                      placeholder={t('contact.form.placeholders.prefix', {
+                        field: input.placeholder.toLowerCase(),
+                      })}
                       error={formErrors[input.id]}
                       isTextarea={input.label === 'textarea'}
                       rows={input.label === 'textarea' ? '5' : undefined}
@@ -81,7 +82,9 @@ const ContactForm = () => {
                     }`}
                     disabled={isSubmitting}
                   >
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting
+                      ? t('contact.form.sending')
+                      : t('contact.form.submit')}
                   </button>
                 </form>
               </div>
@@ -99,10 +102,9 @@ const ContactForm = () => {
           closeMessageSent();
           if (import.meta.env.DEV) setForceShowNotification(false);
         }}
-        message="Thank you for contacting us. We'll be in touch soon."
+        message={t('contact.form.successMessage')}
       />
 
-      {/* Development tools */}
       <DevTools />
     </section>
   );

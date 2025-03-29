@@ -1,0 +1,168 @@
+{
+  "header": {
+    "nav": {
+      "home": "Inicio",
+      "about": "Quienes somos",
+      "services": "Servicios",
+      "contact": "Contactar"
+    },
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú"
+  },
+  "home": {
+    "tagline": "Creando Calidad, Construyendo Confianza",
+    "callToAction": "¿Listo para construir la casa de tus sueños? ¡Obtén una consulta gratuita hoy!",
+    "contactButton": "Contáctanos"
+  },
+  "about": {
+    "landing": {
+      "title": "Quienes Somos"
+    },
+    "introduction": {
+      "description": "Somos una empresa de construcción dedicada a edificar hogares de alta calidad, duraderos y con diseños hermosos. Con valores sólidos y pasión por la artesanía, aportamos un toque único a cada proyecto, combinando tradición, innovación y atención al detalle."
+    },
+    "whoWeAre": {
+      "title": "Quiénes somos",
+      "description": "Fundada por un equipo de constructores y diseñadores experimentados, Prime Builders fue creada para proporcionar a las familias hogares de alta calidad de los que puedan estar verdaderamente orgullosos. Nuestro equipo bilingüe, con fluidez tanto en inglés como en español, garantiza un proceso de construcción fluido, claro y sin estrés, haciendo realidad tu visión con artesanía y cuidado expertos."
+    },
+    "mission": {
+      "title": "Nuestra Misión",
+      "description": "Nos esforzamos por construir más que simples casas: creamos hogares que resisten la prueba del tiempo. Nuestra misión es proporcionar servicios de construcción de la más alta calidad mientras nos mantenemos fieles a nuestros valores de excelencia, comunidad y confianza."
+    },
+    "values": {
+      "sectionTitle": "¿Por qué elegirnos?",
+      "latinoHeritage": {
+        "title": "Herencia Latina y Artesanía",
+        "description": "Aportamos orgullo cultural y precisión a cada proyecto."
+      },
+      "customerCentered": {
+        "title": "Enfoque Centrado en el Cliente",
+        "description": "Tu visión importa. Trabajamos estrechamente con los clientes para convertir sueños en realidad."
+      },
+      "qualityEfficiency": {
+        "title": "Calidad y Eficiencia",
+        "description": "Utilizamos materiales de primera calidad y métodos de construcción probados para garantizar hogares duraderos."
+      },
+      "affordablePricing": {
+        "title": "Precios Asequibles y Transparentes",
+        "description": "Sin tarifas ocultas, solo precios justos y honestos para cada proyecto."
+      }
+    },
+    "team": {
+      "sectionTitle": "Conoce a Nuestro Equipo",
+      "member1": {
+        "name": "John Doe",
+        "role": "Fundador y Contratista Principal",
+        "description": "Con más de 15 años en la industria de la construcción, John fundó Prime Builders para llevar artesanía de alta calidad a las comunidades locales. Su experiencia en construcción de viviendas, remodelación y gestión de proyectos garantiza que cada casa se construya a la perfección."
+      },
+      "member2": {
+        "name": "Maria López",
+        "role": "Gerente de Proyectos",
+        "description": "Maria mantiene cada proyecto funcionando sin problemas, asegurando que los plazos y presupuestos se mantengan en curso. Con formación en arquitectura y años de experiencia en el campo de la construcción, ella conecta el diseño con la ejecución."
+      },
+      "member3": {
+        "name": "Javier Torres",
+        "role": "Arquitecto Principal",
+        "description": "Javier se especializa en diseñar hogares funcionales y hermosos adaptados a las necesidades únicas de cada familia. Su visión creativa, combinada con precisión técnica, ayuda a convertir ideas en realidades impresionantes."
+      },
+      "member4": {
+        "name": "Diego Hernández",
+        "role": "Carpintero Principal",
+        "description": "Diego es un maestro de su oficio, aportando detalles intrincados y acabados de alta calidad a cada hogar. Su dedicación a la excelencia se puede ver en cada estructura, desde el encuadre hasta los toques finales."
+      },
+      "member5": {
+        "name": "Jane Doe",
+        "role": "Especialista en Diseño de Interiores",
+        "description": "Jane aporta calidez y estilo a cada proyecto, asegurando que los hogares no solo estén bien construidos sino también bellamente diseñados. Su ojo atento al detalle y pasión por la estética de interiores completan la experiencia de la casa de ensueño."
+      }
+    }
+  },
+  "services": {
+    "landing": {
+      "title": "Servicios"
+    },
+    "introduction": {
+      "description": "En Prime Builders, creemos que un hogar es más que solo paredes y un techo: es donde ocurren los mejores momentos de la vida. Nos enorgullecemos de construir más que simples casas: creamos hogares donde las familias pueden crecer, celebrar y crear recuerdos duraderos. Desde el concepto hasta la finalización, nuestro equipo está dedicado a ofrecer excelencia, asegurando que cada detalle se elabore con precisión y cuidado."
+    },
+    "list": {
+      "customHome": {
+        "title": "Construcción de Casas Personalizadas",
+        "description": "Construimos hogares adaptados a tus necesidades, estilo y presupuesto. Desde los cimientos hasta los toques finales, creamos espacios donde las familias pueden crecer y prosperar."
+      },
+      "renovation": {
+        "title": "Renovaciones y Remodelaciones",
+        "description": "Transforma tu espacio existente con servicios de remodelación expertos. Ya sea una cocina moderna, un baño lujoso o una renovación completa del hogar, hacemos realidad tus mejoras soñadas."
+      },
+      "outdoor": {
+        "title": "Espacios Exteriores",
+        "description": "Desde patios y terrazas hasta cocinas al aire libre, creamos hermosas áreas exteriores que aportan comodidad y estilo a tu jardín."
+      }
+    },
+    "recentWork": {
+      "title": "Trabajos Recientes",
+      "description": "Explore nuestros proyectos recientes a continuación para ver cómo hemos transformado espacios y creado estructuras que resisten el paso del tiempo. Ya sea que esté planeando una pequeña renovación o un proyecto de construcción a gran escala, nuestro portafolio demuestra nuestra capacidad para entregar resultados excepcionales."
+    }
+  },
+  "footer": {
+    "sections": {
+      "quickLinks": "Enlaces Rápidos",
+      "ourServices": "Nuestros Servicios",
+      "contactUs": "Contáctenos"
+    },
+    "quickLinks": {
+      "home": "Inicio",
+      "about": "Quienes somos",
+      "services": "Servicios",
+      "contact": "Contacto"
+    },
+    "contactInfo": {
+      "address": "Houston, Texas",
+      "phone": "(555) 123-4567",
+      "email": "info@primebuilders.com"
+    },
+    "companyInfo": {
+      "name": "PRIME BUILDERS CPT LCC",
+      "description": "Creando Calidad, Construyendo Confianza."
+    },
+    "copyright": "Copyright © {{year}} {{company}}. Todos los derechos reservados."
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "introduction": "Nos encantaría saber de usted. Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible.",
+    "form": {
+      "subject": "Asunto",
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "message": "Mensaje",
+      "placeholders": {
+        "prefix": "Su {{field}}"
+      },
+      "submit": "Enviar Mensaje",
+      "sending": "Enviando...",
+      "successMessage": "Gracias por contactarnos. Nos pondremos en contacto pronto.",
+      "errors": {
+        "tooManyAttempts": "Demasiados intentos. Por favor, inténtelo de nuevo en {{timeRemaining}} segundos.",
+        "submitFailed": "Error al enviar el mensaje. Por favor, inténtelo de nuevo más tarde."
+      }
+    },
+    "info": {
+      "office": {
+        "title": "Nuestra Oficina",
+        "address1": "123 Construction Way",
+        "address2": "Building City, ST 12345"
+      },
+      "contactDetails": {
+        "title": "Información de Contacto",
+        "email": "Correo: info@primebuilders.com",
+        "phone": "Teléfono: (555) 123-4567"
+      },
+      "hours": {
+        "title": "Horario de Atención",
+        "weekdays": "Lunes - Viernes: 8am - 6pm",
+        "saturday": "Sábado: 9am - 2pm",
+        "sunday": "Domingo: Cerrado"
+      }
+    }
+  }
+}

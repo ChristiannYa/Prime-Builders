@@ -1,0 +1,168 @@
+{
+  "header": {
+    "nav": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "home": {
+    "tagline": "Crafting Quality, Building Trust",
+    "callToAction": "Ready to build your dream home? Get a free consultation today!",
+    "contactButton": "Contact Us"
+  },
+  "about": {
+    "landing": {
+      "title": "About Us"
+    },
+    "introduction": {
+      "description": "We are a construction company dedicated to building high-quality, durable, and beautifully designed homes. With strong values and a passion for craftsmanship, we bring a unique touch to every project—combining tradition, innovation, and attention to detail."
+    },
+    "whoWeAre": {
+      "title": "Who we are",
+      "description": "Founded by a team of skilled builders and designers, Prime Builders was created to provide families with high-quality homes they can truly be proud of. Our bilingual team, fluent in both English and Spanish, ensures a smooth, clear, and stress-free building process, making your vision a reality with expert craftsmanship and care."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "We strive to build more than just houses—we create homes that stand the test of time. Our mission is to provide top-quality construction services while staying true to our values of excellence, community, and trust."
+    },
+    "values": {
+      "sectionTitle": "Why Choose Us?",
+      "latinoHeritage": {
+        "title": "Latino Heritage & Craftsmanship",
+        "description": "We bring cultural pride and precision to every project."
+      },
+      "customerCentered": {
+        "title": "Customer-Centered Approach",
+        "description": "Your vision matters. We work closely with clients to turn dreams into reality."
+      },
+      "qualityEfficiency": {
+        "title": "Quality & Efficiency",
+        "description": "We use top-tier materials and proven construction methods to ensure lasting homes."
+      },
+      "affordablePricing": {
+        "title": "Affordable & Transparent Pricing",
+        "description": "No hidden fees, just honest and fair pricing for every project."
+      }
+    },
+    "team": {
+      "sectionTitle": "Meet Our Team",
+      "member1": {
+        "name": "John Doe",
+        "role": "Founder & Lead Contractor",
+        "description": "With over 15 years in the construction industry, John started Prime Builders to bring high-quality craftsmanship to local communities. His expertise in home building, remodeling, and project management ensures that every house is built to perfection."
+      },
+      "member2": {
+        "name": "Maria López",
+        "role": "Project Manager",
+        "description": "Maria keeps every project running smoothly, ensuring timelines and budgets stay on track. With a background in architecture and years of experience in the construction field, she bridges the gap between design and execution."
+      },
+      "member3": {
+        "name": "Javier Torres",
+        "role": "Head Architect",
+        "description": "Javier specializes in designing functional, beautiful homes tailored to each family's unique needs. His creative vision, paired with technical precision, helps turn ideas into stunning reality."
+      },
+      "member4": {
+        "name": "Diego Hernández",
+        "role": "Lead Carpenter",
+        "description": "Diego is a master of his craft, bringing intricate details and high-quality finishes to every home. His dedication to excellence can be seen in every structure, from framing to final touches."
+      },
+      "member5": {
+        "name": "Jane Doe",
+        "role": "Interior Design Specialist",
+        "description": "Jane brings warmth and style to every project, ensuring homes are not only well-built but also beautifully designed. Her keen eye for detail and passion for interior aesthetics complete the dream home experience."
+      }
+    }
+  },
+  "services": {
+    "landing": {
+      "title": "Our Services"
+    },
+    "introduction": {
+      "description": "At Prime Builders, we believe a home is more than just walls and a roof-it's where life's best moments happen. We take pride in building more than just houses-we create homes where families can grow, celebrate, and make lasting memories. From concept to completion, our team is dedicated to delivering excellence, ensuring every detail is crafted with precision and care."
+    },
+    "list": {
+      "customHome": {
+        "title": "Custom Home Construction",
+        "description": "We build homes tailored to your needs, style, and budget. From foundation to finishing touches, we create spaces where families can grow and thrive."
+      },
+      "renovation": {
+        "title": "Home Renovations & Remodeling",
+        "description": "Transform your existing space with expert remodeling services. Whether it's a modern kitchen, a luxurious bathroom, or a full-home renovation, we make your dream upgrades a reality."
+      },
+      "outdoor": {
+        "title": "Outdoor Living Spaces",
+        "description": "From patios and decks to outdoor kitchens, we create beautiful outdoor areas that bring comfort and style to your backyard."
+      }
+    },
+    "recentWork": {
+      "title": "Recent Work",
+      "description": "Browse through our recent projects below to see how we've transformed spaces and created structures that stand the test of time. Whether you're planning a small renovation or a large-scale construction project, our portfolio demonstrates our capability to deliver exceptional results."
+    }
+  },
+  "footer": {
+    "sections": {
+      "quickLinks": "Quick Links",
+      "ourServices": "Our Services",
+      "contactUs": "Contact Us"
+    },
+    "quickLinks": {
+      "home": "Home",
+      "about": "About Us",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "contactInfo": {
+      "address": "Houston, Texas",
+      "phone": "(555) 123-4567",
+      "email": "info@primebuilders.com"
+    },
+    "companyInfo": {
+      "name": "PRIME BUILDERS CPT LCC",
+      "description": "Crafting Quality, Building Trust."
+    },
+    "copyright": "Copyright © {{year}} {{company}}. All rights reserved."
+  },
+  "contact": {
+    "title": "Contact Us",
+    "introduction": "We'd love to hear from you. Fill out the form below and we'll get back to you as soon as possible.",
+    "form": {
+      "subject": "Subject",
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "placeholders": {
+        "prefix": "Your {{field}}"
+      },
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "successMessage": "Thank you for contacting us. We'll be in touch soon.",
+      "errors": {
+        "tooManyAttempts": "Too many attempts. Please try again in {{timeRemaining}} seconds.",
+        "submitFailed": "Failed to send message. Please try again later."
+      }
+    },
+    "info": {
+      "office": {
+        "title": "Our Office",
+        "address1": "123 Construction Way",
+        "address2": "Building City, ST 12345"
+      },
+      "contactDetails": {
+        "title": "Contact Information",
+        "email": "Email: info@primebuilders.com",
+        "phone": "Phone: (555) 123-4567"
+      },
+      "hours": {
+        "title": "Business Hours",
+        "weekdays": "Monday - Friday: 8am - 6pm",
+        "saturday": "Saturday: 9am - 2pm",
+        "sunday": "Sunday: Closed"
+      }
+    }
+  }
+}
