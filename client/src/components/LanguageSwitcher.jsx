@@ -12,19 +12,13 @@ const LanguageSwitcher = () => {
     currentLanguage === 'en' || currentLanguage.startsWith('en-');
 
   return (
-    <div className="flex justify-end items-center py-3 pr-1">
+    <div className="flex justify-end items-center py-3">
       {isEnglish ? (
-        <button
-          onClick={() => changeLanguage('es')}
-          className="translateBtn"
-        >
+        <button onClick={() => changeLanguage('es')} className="translateBtn">
           ES
         </button>
       ) : (
-        <button
-          onClick={() => changeLanguage('en')}
-          className="translateBtn"
-        >
+        <button onClick={() => changeLanguage('en')} className="translateBtn">
           EN
         </button>
       )}
