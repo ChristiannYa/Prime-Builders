@@ -1,8 +1,6 @@
-// Background image and its pixelated version
-import aboutBg from './about-bg.jpg';
-import aboutBgSmall from './about-bg-small.jpg';
+const aboutVideo = '/about-landing.mp4';
+import aboutVideoSmall from '/about-landing-small.jpg';
 
-// Team member images
 import male1 from './male1.jpg';
 import male1Small from './male1-small.jpg';
 
@@ -19,9 +17,9 @@ import female2 from './female2.jpg';
 import female2Small from './female2-small.jpg';
 
 export default {
-  about: {
-    original: aboutBg,
-    placeholder: aboutBgSmall,
+  aboutVideo: {
+    src: aboutVideo,
+    placeholder: aboutVideoSmall,
   },
 
   team: {

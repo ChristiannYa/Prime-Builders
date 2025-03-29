@@ -1,12 +1,9 @@
-import homeBg from './home-bg.jpg';
-import homeVideoPlaceholder from '/home-video-placeholder.jpg';
-
-const homeVideo = '/home-video-compressed.mp4';
+import home2Bg from './home2-bg.jpg';
+import home2BgSsmall from './home2-bg-small.jpg';
 
 export default {
-  homeBg,
-  homeVideo: {
-    src: homeVideo,
-    placeholder: homeVideoPlaceholder,
+  home: {
+    original: home2Bg,
+    placeholder: home2BgSsmall,
   },
 };

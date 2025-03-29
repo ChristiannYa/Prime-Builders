@@ -4,7 +4,7 @@ import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-import VideoWithLoader from '../../components/VideoWithLoader';
+import ImageWithLoader from '../../components/ImageWithLoader';
 import homeAssets from '../../assets/home-page';
 
 const HomePage = () => {
@@ -40,7 +40,7 @@ const HomePage = () => {
         isMobile ? 'landingSection' : 'w-full h-screen overflow-hidden'
       }
     >
-      <VideoWithLoader
+      {/* <VideoWithLoader
         src={homeAssets.homeVideo.src}
         placeholderSrc={homeAssets.homeVideo.placeholder}
         className="w-full h-full object-cover"
@@ -48,6 +48,12 @@ const HomePage = () => {
         loop
         muted
         playsInline
+      /> */}
+      <ImageWithLoader
+        src={homeAssets.home.original}
+        placeholderSrc={homeAssets.home.placeholder}
+        className="wh-full object-cover"
+        alt="Prime Builders Landing Image"
       />
       <div className="dark-glass text-center w-full p-2 absolute-bottom-center">
         <h1

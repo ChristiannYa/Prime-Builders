@@ -20,8 +20,6 @@ import recentWork4 from './recent-work-4.jpg';
 import recentWork4Small from './recent-work-4-small.jpg';
 import recentWork5 from './recent-work-5.jpg';
 import recentWork5Small from './recent-work-5-small.jpg';
-import recentWork6 from './recent-work-6.jpg';
-import recentWork6Small from './recent-work-6-small.jpg';
 
 export default {
   services: {
@@ -67,11 +65,6 @@ export default {
       key: 5,
       original: recentWork5,
       placeholder: recentWork5Small,
-    },
-    {
-      key: 6,
-      original: recentWork6,
-      placeholder: recentWork6Small,
     },
   ],
 };
