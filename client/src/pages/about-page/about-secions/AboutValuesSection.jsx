@@ -19,7 +19,9 @@ const AboutValuesSection = () => {
               key={index}
               className="bg-neutral-200 rounded-sm shadow-card p-3"
             >
-              <h3 className="textSubtitle text-secondary">{value.title}</h3>
+              <h3 className="textSubtitle text-secondary normal-case">
+                {value.title}
+              </h3>
               <p className="textCard text-secondary">{value.description}</p>
             </div>
           ))}
