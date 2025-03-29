@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-
 import ImageWithLoader from '../../../components/ImageWithLoader';
 import servicesAssets from '../../../assets/services-page';
 import { useLetterAnimation } from '../../../hooks/useLetterAnimation';
@@ -20,7 +19,7 @@ const ServicesLandingSection = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
         <div className="absolute-bottom-center mb-12 text-center">
           <h1 className="pageTitle" ref={titleRef}>
-            {t('services.landing.title')}{' '}
+            {t('services.landing.title')}
           </h1>
         </div>
       </div>
