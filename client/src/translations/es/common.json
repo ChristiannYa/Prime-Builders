@@ -158,7 +158,7 @@
       },
       "hours": {
         "title": "Horario de Atención",
-        "weekdays": "Lunes - Viernes: 8am - 6pm",
+        "weekdays": "Lunes - Viernes: 9am - 6pm",
         "saturday": "Sábado: 9am - 2pm",
         "sunday": "Domingo: Cerrado"
       }
