@@ -117,8 +117,8 @@
     },
     "contactInfo": {
       "address": "Houston, Texas",
-      "phone": "(555) 123-4567",
-      "email": "info@primebuilders.com"
+      "phone": "(713) 459-9431",
+      "email": "primebuilderscpt@gmail.com"
     },
     "companyInfo": {
       "name": "PRIME BUILDERS CPT LCC",
@@ -149,13 +149,12 @@
     "info": {
       "office": {
         "title": "Nuestra Oficina",
-        "address1": "123 Construction Way",
-        "address2": "Building City, ST 12345"
+        "address1": "Houston, Texas"
       },
       "contactDetails": {
         "title": "Información de Contacto",
-        "email": "Correo: info@primebuilders.com",
-        "phone": "Teléfono: (555) 123-4567"
+        "email": "Correo: primebuilderscpt@gmail.com",
+        "phone": "Teléfono: (713) 459-9431"
       },
       "hours": {
         "title": "Horario de Atención",

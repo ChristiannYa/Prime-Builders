@@ -12,9 +12,6 @@ const ContactPageInfo = () => {
         <p className="contact__info-text">
           {t('contact.info.office.address1')}
         </p>
-        <p className="contact__info-text">
-          {t('contact.info.office.address2')}
-        </p>
       </div>
 
       <div className="contact__info-card">
