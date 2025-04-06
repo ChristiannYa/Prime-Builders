@@ -1,11 +1,10 @@
-import { isMobile } from 'react-device-detect';
-import { useEffect, useRef } from 'react';
-import gsap from 'gsap';
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
-import ImageWithLoader from '../../components/ImageWithLoader';
-import homeAssets from '../../assets/home-page';
+import ImageWithLoader from "../../components/ImageWithLoader";
+import homeAssets from "../../assets/home-page";
 
 const HomePage = () => {
   const { t } = useTranslation();
@@ -21,16 +20,16 @@ const HomePage = () => {
     tl.to(titleRef.current, {
       scale: 1,
       duration: 2,
-      ease: 'power3.out',
+      ease: "power3.out",
       delay: 0.5,
     }).to(
       contentRef.current,
       {
         opacity: 1,
         duration: 0.3,
-        ease: 'power2.out',
+        ease: "power2.out",
       },
-      '-=1'
+      "-=1"
     );
   }, []);
 
@@ -52,10 +51,10 @@ const HomePage = () => {
         <div ref={contentRef} className="space-y-1">
           <div className="text-text-white font-nunito text-medium">
             <h2 className="font-bonanova max-sm:text-sm">
-              {t('home.tagline')}
+              {t("home.tagline")}
             </h2>
             <h2 className="font-monsterrat max-sm:text-sm">
-              {t('home.callToAction')}
+              {t("home.callToAction")}
             </h2>
           </div>
           <div className="text-white flexrow-center gap-x-4">
@@ -77,7 +76,7 @@ const HomePage = () => {
               (713) 459-9431
             </button>
             <Link to="/contact" className="ctaLandingHover text-normal">
-              {t('home.contactButton')}
+              {t("home.contactButton")}
             </Link>
           </div>
         </div>

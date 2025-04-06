@@ -1,6 +1,6 @@
-import { useTranslation } from 'react-i18next';
-import { getTeamMembers } from '../../../contants/about-page';
-import ImageWithLoader from '../../../components/ImageWithLoader';
+import { useTranslation } from "react-i18next";
+import { getTeamMembers } from "../../../contants/about-page";
+import ImageWithLoader from "../../../components/ImageWithLoader";
 
 const AboutTeam = () => {
   const { t } = useTranslation();
@@ -10,16 +10,16 @@ const AboutTeam = () => {
     <div className="sectionPaddingY bg-secondary relative">
       <div className="screen-xl">
         <h3 className="textTitle text-center font-medium mb-7">
-          {t('about.team.sectionTitle')}
+          {t("about.team.sectionTitle")}
         </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flexcol-center">
           {translatedTeamMembers.map((member) => (
             <div
               key={member.id}
-              className="bg-white/5 rounded-sm p-4 flex flex-col items-center text-center"
+              className="md:w-[600px] bg-white/5 rounded-sm p-4 flex flex-col items-center text-center"
             >
-              <div className="w-36 h-36 rounded-full overflow-hidden mb-4">
+              <div className="w-44 h-44 rounded-full overflow-hidden mb-3">
                 <ImageWithLoader
                   src={member.image}
                   placeholderSrc={member.placeholderImage}

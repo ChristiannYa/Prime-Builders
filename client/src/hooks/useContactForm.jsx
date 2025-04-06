@@ -1,16 +1,16 @@
-import { useState, useCallback } from 'react';
-import { validateContactForm } from '../utils/FormValidation';
-import { useRateLimit } from '../utils/useRateLimit';
-import { apiClient } from '../utils/apiClient';
-import { getFormInputs } from '../contants/contact-page';
-import { useTranslation } from 'react-i18next';
+import { useState, useCallback } from "react";
+import { validateContactForm } from "../utils/FormValidation";
+import { useRateLimit } from "../utils/useRateLimit";
+import { apiClient } from "../utils/apiClient";
+import { getFormInputs } from "../contants/contact-page";
+import { useTranslation } from "react-i18next";
 
 const useContactForm = () => {
   const { t } = useTranslation();
   const formInputs = getFormInputs();
 
   const initialFormState = formInputs.reduce((acc, input) => {
-    acc[input.id] = '';
+    acc[input.id] = "";
     return acc;
   }, {});
 
@@ -43,7 +43,7 @@ const useContactForm = () => {
 
     if (isLimited) {
       setFormErrors({
-        submit: t('contact.form.errors.tooManyAttempts', { timeRemaining }),
+        submit: t("contact.form.errors.tooManyAttempts", { timeRemaining }),
       });
       return;
     }
@@ -54,7 +54,7 @@ const useContactForm = () => {
     if (Object.keys(errors).length === 0) {
       if (!attempt()) {
         setFormErrors({
-          submit: t('contact.form.errors.tooManyAttempts', { timeRemaining }),
+          submit: t("contact.form.errors.tooManyAttempts", { timeRemaining }),
         });
         return;
       }
@@ -62,8 +62,8 @@ const useContactForm = () => {
       setIsSubmitting(true);
 
       try {
-        await apiClient.post('/api/contact/submit', formData);
-        console.log('Form submitted successfully');
+        await apiClient.post("/api/contact/submit", formData);
+        console.log("Form submitted successfully");
 
         setShowMessageSent(true);
         resetForm();
@@ -71,9 +71,9 @@ const useContactForm = () => {
           setShowMessageSent(false);
         }, 5000);
       } catch (error) {
-        console.error('Error submitting form:', error);
+        console.error("Error submitting form:", error);
         setFormErrors({
-          submit: error.message || t('contact.form.errors.submitFailed'),
+          submit: error.message || t("contact.form.errors.submitFailed"),
         });
       } finally {
         setIsSubmitting(false);

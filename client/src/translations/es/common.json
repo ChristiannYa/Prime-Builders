@@ -51,29 +51,9 @@
     "team": {
       "sectionTitle": "Conoce a Nuestro Equipo",
       "member1": {
-        "name": "John Doe",
+        "name": "Iveth Lopez",
         "role": "Fundador y Contratista Principal",
-        "description": "Con más de 15 años en la industria de la construcción, John fundó Prime Builders para llevar artesanía de alta calidad a las comunidades locales. Su experiencia en construcción de viviendas, remodelación y gestión de proyectos garantiza que cada casa se construya a la perfección."
-      },
-      "member2": {
-        "name": "Maria López",
-        "role": "Gerente de Proyectos",
-        "description": "Maria mantiene cada proyecto funcionando sin problemas, asegurando que los plazos y presupuestos se mantengan en curso. Con formación en arquitectura y años de experiencia en el campo de la construcción, ella conecta el diseño con la ejecución."
-      },
-      "member3": {
-        "name": "Javier Torres",
-        "role": "Arquitecto Principal",
-        "description": "Javier se especializa en diseñar hogares funcionales y hermosos adaptados a las necesidades únicas de cada familia. Su visión creativa, combinada con precisión técnica, ayuda a convertir ideas en realidades impresionantes."
-      },
-      "member4": {
-        "name": "Diego Hernández",
-        "role": "Carpintero Principal",
-        "description": "Diego es un maestro de su oficio, aportando detalles intrincados y acabados de alta calidad a cada hogar. Su dedicación a la excelencia se puede ver en cada estructura, desde el encuadre hasta los toques finales."
-      },
-      "member5": {
-        "name": "Jane Doe",
-        "role": "Especialista en Diseño de Interiores",
-        "description": "Jane aporta calidez y estilo a cada proyecto, asegurando que los hogares no solo estén bien construidos sino también bellamente diseñados. Su ojo atento al detalle y pasión por la estética de interiores completan la experiencia de la casa de ensueño."
+        "description": "Iveth fundó Prime Builders con una sólida base en construcción de viviendas, remodelación y gestión de proyectos. Su enfoque práctico y dedicación a la calidad en la mano de obra le han ganado rápidamente la confianza de las comunidades locales. Cada proyecto que lidera refleja su compromiso con la precisión y la excelencia."
       }
     }
   },

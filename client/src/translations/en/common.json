@@ -51,29 +51,9 @@
     "team": {
       "sectionTitle": "Meet Our Team",
       "member1": {
-        "name": "John Doe",
+        "name": "Iveth Lopez",
         "role": "Founder & Lead Contractor",
-        "description": "With over 15 years in the construction industry, John started Prime Builders to bring high-quality craftsmanship to local communities. His expertise in home building, remodeling, and project management ensures that every house is built to perfection."
-      },
-      "member2": {
-        "name": "Maria López",
-        "role": "Project Manager",
-        "description": "Maria keeps every project running smoothly, ensuring timelines and budgets stay on track. With a background in architecture and years of experience in the construction field, she bridges the gap between design and execution."
-      },
-      "member3": {
-        "name": "Javier Torres",
-        "role": "Head Architect",
-        "description": "Javier specializes in designing functional, beautiful homes tailored to each family's unique needs. His creative vision, paired with technical precision, helps turn ideas into stunning reality."
-      },
-      "member4": {
-        "name": "Diego Hernández",
-        "role": "Lead Carpenter",
-        "description": "Diego is a master of his craft, bringing intricate details and high-quality finishes to every home. His dedication to excellence can be seen in every structure, from framing to final touches."
-      },
-      "member5": {
-        "name": "Jane Doe",
-        "role": "Interior Design Specialist",
-        "description": "Jane brings warmth and style to every project, ensuring homes are not only well-built but also beautifully designed. Her keen eye for detail and passion for interior aesthetics complete the dream home experience."
+        "description": "Iveth founded Prime Builders with a strong foundation in home building, remodeling, and project management. Her hands-on approach and dedication to quality craftsmanship have quickly earned the trust of local communities. Every project she leads reflects her commitment to precision and excellence."
       }
     }
   },

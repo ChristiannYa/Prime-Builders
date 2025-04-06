@@ -1,7 +1,7 @@
 import AboutLandingSection from "./about-secions/AboutLandingSection";
 import AboutIntroductionSection from "./about-secions/AboutIntroductionSection";
 import AboutValuesSection from "./about-secions/AboutValuesSection";
-import AboutTeamSection from './about-secions/AboutTeamSection';
+import AboutTeamSection from "./about-secions/AboutTeamSection";
 
 const AboutPage = () => {
   return (
@@ -12,6 +12,6 @@ const AboutPage = () => {
       <AboutTeamSection />
     </div>
   );
-}
+};
 
-export default AboutPage
+export default AboutPage;
