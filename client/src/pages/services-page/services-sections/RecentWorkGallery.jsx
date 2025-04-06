@@ -44,7 +44,10 @@ const RecentWorkGallery = () => {
               scale: 1,
               duration: 0.6,
               delay: staggerDelay,
-              onComplete: () => observer.unobserve(entry.target),
+              onComplete: () => {
+                animatedElements.set(entry.target, true);
+                observer.unobserve(entry.target);
+              },
             });
           }
         });

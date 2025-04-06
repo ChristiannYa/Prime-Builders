@@ -49,7 +49,10 @@ const ServicesListSection = () => {
               duration: 0.3,
               ease: "ease1.inOut",
               delay: staggerDelay,
-              onComplete: () => observer.unobserve(entry.target),
+              onComplete: () => {
+                animatedElements.set(entry.target, true);
+                observer.unobserve(entry.target);
+              },
             });
           }
         });
