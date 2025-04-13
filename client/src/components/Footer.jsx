@@ -1,13 +1,13 @@
-import { Link } from 'react-router-dom';
-import { useTranslation } from 'react-i18next';
-import pageAssets from '../assets/page';
+import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import pageAssets from "../assets/page";
 import {
   getQuickLinks,
   getServiceLinks,
   getContactInfo,
   socialLinks,
   getCompanyInfo,
-} from '../contants/footer/index';
+} from "../contants/footer/index";
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -51,7 +51,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div className="footer__column footer__column--links">
             <h3 className="footer__heading textSubtitle">
-              {t('footer.sections.quickLinks')}
+              {t("footer.sections.quickLinks")}
             </h3>
             <ul className="footer__link-list">
               {quickLinks.map((link, index) => (
@@ -67,7 +67,7 @@ const Footer = () => {
           {/* Services */}
           <div className="footer__column footer__column--services">
             <h3 className="footer__heading textSubtitle">
-              {t('footer.sections.ourServices')}
+              {t("footer.sections.ourServices")}
             </h3>
             <ul className="footer__link-list">
               {serviceLinks.map((service, index) => (
@@ -81,7 +81,7 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="footer__column footer__column--contact">
             <h3 className="footer__heading textSubtitle">
-              {t('footer.sections.contactUs')}
+              {t("footer.sections.contactUs")}
             </h3>
             <div className="footer__contact-list">
               {contactInfo.map((info, index) => (
@@ -97,7 +97,7 @@ const Footer = () => {
         {/* Copyright */}
         <div className="footer__copyright">
           <p className="footer__copyright-text">
-            {t('footer.copyright', {
+            {t("footer.copyright", {
               year: new Date().getFullYear(),
               company: companyInfo.name,
             })}
