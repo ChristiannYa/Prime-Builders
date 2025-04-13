@@ -1,14 +1,14 @@
-import { getServicesList } from '../services-page';
-import i18next from 'i18next';
+import { getServicesList } from "../services-page";
+import i18next from "i18next";
 
 export const getQuickLinks = () => {
   const t = i18next.t;
 
   return [
-    { name: t('footer.quickLinks.home'), path: '/' },
-    { name: t('footer.quickLinks.about'), path: '/about' },
-    { name: t('footer.quickLinks.services'), path: '/services' },
-    { name: t('footer.quickLinks.contact'), path: '/contact' },
+    { name: t("footer.quickLinks.home"), path: "/" },
+    { name: t("footer.quickLinks.about"), path: "/about" },
+    { name: t("footer.quickLinks.services"), path: "/services" },
+    { name: t("footer.quickLinks.contact"), path: "/contact" },
   ];
 };
 
@@ -25,8 +25,8 @@ export const getContactInfo = () => {
 
   return [
     {
-      type: 'address',
-      value: t('footer.contactInfo.address'),
+      type: "address",
+      value: t("footer.contactInfo.address"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,8 +51,8 @@ export const getContactInfo = () => {
       ),
     },
     {
-      type: 'phone',
-      value: t('footer.contactInfo.phone'),
+      type: "phone",
+      value: t("footer.contactInfo.phone"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -71,8 +71,8 @@ export const getContactInfo = () => {
       ),
     },
     {
-      type: 'email',
-      value: t('footer.contactInfo.email'),
+      type: "email",
+      value: t("footer.contactInfo.email"),
       icon: (
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -95,8 +95,8 @@ export const getContactInfo = () => {
 
 export const socialLinks = [
   {
-    name: 'Facebook',
-    url: 'https://facebook.com',
+    name: "Facebook",
+    url: "https://www.facebook.com/share/1EJr4pcBda/?mibextid=wwXIfr",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -110,8 +110,8 @@ export const socialLinks = [
     ),
   },
   {
-    name: 'Instagram',
-    url: 'https://instagram.com',
+    name: "Instagram",
+    url: "https://www.instagram.com/iveth_lopezsalas?igsh=ZDNsOGhna2M5NmVo",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -130,7 +130,7 @@ export const getCompanyInfo = () => {
   const t = i18next.t;
 
   return {
-    name: t('footer.companyInfo.name'),
-    description: t('footer.companyInfo.description'),
+    name: t("footer.companyInfo.name"),
+    description: t("footer.companyInfo.description"),
   };
 };

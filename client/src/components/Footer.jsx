@@ -30,7 +30,9 @@ const Footer = () => {
                 loading="lazy"
               />
             </div>
-            <p className="footer__company-name textCard">{companyInfo.name}</p>
+            <p className="footer__company-name font-medium textCard">
+              {companyInfo.name}
+            </p>
             <div className="footer__social-links">
               {/* Social Media Icons */}
               {socialLinks.map((social, index) => (
