@@ -21,31 +21,21 @@ const AboutTeam = () => {
             >
               <div className="flexrow-center gap-x-6">
                 <div className="w-32 h-32 md:w-36 md:h-36 xl:w-44 xl:h-44 rounded-full overflow-hidden mb-3">
-                  {/* <ImageWithLoader
-                  src={member.image}
-                  placeholderSrc={member.placeholderImage}
-                  alt={`${member.name}, ${member.role}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                /> */}
-                  <img
+                  <ImageWithLoader
                     src={member.image}
+                    placeholderSrc={member.placeholderImage}
+                    alt={`${member.name}, ${member.role}`}
                     className="w-full h-full object-cover"
-                    alt=""
+                    loading="lazy"
                   />
                 </div>
                 <div className="w-32 h-32 md:w-36 md:h-36 xl:w-44 xl:h-44 rounded-full overflow-hidden mb-3">
-                  {/* <ImageWithLoader
-                  src={member.image}
-                  placeholderSrc={member.placeholderImage}
-                  alt={`${member.name}, ${member.role}`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                /> */}
-                  <img
+                  <ImageWithLoader
                     src={member.image2}
+                    placeholderSrc={member.placeholderImage2}
+                    alt={`${member.name}, ${member.role}`}
                     className="w-full h-full object-cover"
-                    alt=""
+                    loading="lazy"
                   />
                 </div>
               </div>
