@@ -1,8 +1,10 @@
 const aboutVideo = "/about-landing.mp4";
 import aboutVideoSmall from "/about-landing-small.jpg";
 
-import female1 from "./female1.jpg";
-import female1Small from "./female1-small.jpg";
+import iveth from "./iveth.jpg";
+import ivethSmall from "./iveth-small.jpg";
+import enrique from "./enrique.jpg";
+import enriqueSmall from "./enrique-small.jpg";
 
 export default {
   aboutVideo: {
@@ -11,9 +13,13 @@ export default {
   },
 
   team: {
-    female1: {
-      original: female1,
-      placeholder: female1Small,
+    iveth: {
+      original: iveth,
+      placeholder: ivethSmall,
+    },
+    enrique: {
+      original: enrique,
+      placeholder: enriqueSmall,
     },
   },
 };

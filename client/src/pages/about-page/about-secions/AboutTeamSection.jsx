@@ -9,7 +9,7 @@ const AboutTeam = () => {
   return (
     <div className="sectionPaddingY bg-secondary relative">
       <div className="screen-xl">
-        <h3 className="textTitle text-center font-medium mb-7">
+        <h3 className="textTitle text-center font-medium mb-6">
           {t("about.team.sectionTitle")}
         </h3>
 
@@ -17,21 +17,46 @@ const AboutTeam = () => {
           {translatedTeamMembers.map((member) => (
             <div
               key={member.id}
-              className="md:w-[600px] bg-white/5 rounded-sm p-4 flex flex-col items-center text-center"
+              className="md:w-[620px] rounded-sm p-4 flex flex-col items-center text-center"
             >
-              <div className="w-44 h-44 rounded-full overflow-hidden mb-3">
-                <ImageWithLoader
+              <div className="flexrow-center gap-x-6">
+                <div className="w-32 h-32 md:w-36 md:h-36 xl:w-44 xl:h-44 rounded-full overflow-hidden mb-3">
+                  {/* <ImageWithLoader
                   src={member.image}
                   placeholderSrc={member.placeholderImage}
                   alt={`${member.name}, ${member.role}`}
                   className="w-full h-full object-cover"
                   loading="lazy"
-                />
+                /> */}
+                  <img
+                    src={member.image}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
+                </div>
+                <div className="w-32 h-32 md:w-36 md:h-36 xl:w-44 xl:h-44 rounded-full overflow-hidden mb-3">
+                  {/* <ImageWithLoader
+                  src={member.image}
+                  placeholderSrc={member.placeholderImage}
+                  alt={`${member.name}, ${member.role}`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                /> */}
+                  <img
+                    src={member.image2}
+                    className="w-full h-full object-cover"
+                    alt=""
+                  />
+                </div>
               </div>
-              <h3 className="textSubtitle text-primary font-medium">
-                {member.name}
-              </h3>
-              <h4 className="text text-white/70 font-medium">{member.role}</h4>
+              <div className="space-y-1 mb-1">
+                <h3 className="text-primary textSubtitle font-medium normal-case">
+                  {member.name}
+                </h3>
+                <h4 className="text text-white/70 font-medium">
+                  {member.role}
+                </h4>
+              </div>
               <p className="textCard">{member.description}</p>
             </div>
           ))}

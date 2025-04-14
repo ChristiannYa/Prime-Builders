@@ -32,8 +32,10 @@ export const getTeamMembers = () => {
       id: 1,
       name: t("about.team.member1.name"),
       role: t("about.team.member1.role"),
-      image: aboutAssets.team.female1.original,
-      placeholderImage: aboutAssets.team.female1.placeholder,
+      image: aboutAssets.team.iveth.original,
+      image2: aboutAssets.team.enrique.original,
+      placeholderImage: aboutAssets.team.iveth.placeholder,
+      placeholderImage2: aboutAssets.team.enrique.placeholder,
       description: t("about.team.member1.description"),
     },
   ];
